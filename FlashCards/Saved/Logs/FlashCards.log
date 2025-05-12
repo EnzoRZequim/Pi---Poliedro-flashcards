@@ -2331,3 +2331,501 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.05.12-16.47.15:521][494]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2025.05.12-16.47.15:521][494]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.05.12-16.47.15:521][494]AssetCheck: /Game/TelaMateria Validando ativo
+[2025.05.12-16.47.46:320][622]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1393.363770
+[2025.05.12-16.47.46:512][641]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.05.12-16.47.46:512][641]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1393.544922, Update Interval: 302.153381
+[2025.05.12-16.48.08:532][997]LogStreaming: Display: FlushAsyncLoading(677): 1 QueuedPackages, 0 AsyncPackages
+[2025.05.12-16.48.08:539][997]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Início.Início
+[2025.05.12-16.48.08:539][997]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_5
+[2025.05.12-16.48.08:545][997]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_6
+[2025.05.12-16.53.12:152][437]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1719.195557
+[2025.05.12-16.53.13:152][440]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.05.12-16.53.13:152][440]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1719.861938, Update Interval: 340.028076
+[2025.05.12-16.59.27:188][562]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2094.234375
+[2025.05.12-16.59.28:189][565]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.05.12-16.59.28:189][565]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2094.901123, Update Interval: 347.050385
+[2025.05.12-17.01.27:899][566]LogContentBrowser: Deferred new asset file creation: NewWorld
+[2025.05.12-17.01.27:903][566]LogContentBrowser: Creating deferred item: NewWorld
+[2025.05.12-17.01.27:911][567]LogContentBrowser: Renaming the item being created (Deferred Item: NewWorld).
+[2025.05.12-17.03.21:440][186]LogContentBrowser: Attempting asset rename: NewWorld -> Flashcard
+[2025.05.12-17.03.21:441][186]LogChaosDD: Creating Chaos Debug Draw Scene for world Flashcard
+[2025.05.12-17.03.21:443][186]LogContentBrowser: End creating deferred item NewWorld
+[2025.05.12-17.03.23:524][424]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2025.05.12-17.03.26:756][424]LogSlate: Window 'Salvar conteúdo' being destroyed
+[2025.05.12-17.03.55:043][862]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2025.05.12-17.03.55:044][862]LogFileHelpers: Editor autosave (incl. external actors) for '/Temp/Untitled_1' took 0.021
+[2025.05.12-17.04.21:892][579]LogObjectTools: Deleting 1 worlds: /Game/Flashcard.Flashcard
+[2025.05.12-17.04.21:892][579]LogObjectTools: Currently 5 active worlds: /Temp/Untitled_1.Untitled_1, /Engine/Transient.World_0, /Engine/Transient.World_1, /Engine/Transient.World_5, /Engine/Transient.World_6
+[2025.05.12-17.04.21:909][579]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2025.05.12-17.04.24:246][579]LogSlate: Window 'Delete Assets' being destroyed
+[2025.05.12-17.04.24:251][579]LogWorld: UWorld::CleanupWorld for Flashcard, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.04.24:251][579]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.04.24:273][579]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2025.05.12-17.04.24:290][579]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2025.05.12-17.04.24:306][579]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2025.05.12-17.04.26:798][862]LogStreaming: Display: FlushAsyncLoading(678): 1 QueuedPackages, 0 AsyncPackages
+[2025.05.12-17.04.29:986][862]LogSlate: Window 'Novo nível' being destroyed
+[2025.05.12-17.04.30:013][862]LogWorld: UWorld::CleanupWorld for Untitled_1, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.04.30:013][862]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.04.30:013][862]LogWorldPartition: UWorldPartition::Uninitialize : World = /Temp/Untitled_1.Untitled_1
+[2025.05.12-17.04.30:032][862]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.05.12-17.04.30:048][862]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2025.05.12-17.04.30:052][862]LogChaosDD: Creating Chaos Debug Draw Scene for world Untitled
+[2025.05.12-17.04.30:053][862]LogAudio: Display: Audio Device (ID: 1) registered with world 'Untitled'.
+[2025.05.12-17.04.30:378][865]LogD3D12RHI: Creating RTPSO with 21 shaders (13 cached, 8 new) took 269.16 ms. Compile time 265.89 ms, link time 3.26 ms.
+[2025.05.12-17.04.30:563][865]LogD3D12RHI: Creating RTPSO with 13 shaders (0 cached, 13 new) took 454.27 ms. Compile time 443.70 ms, link time 10.55 ms.
+[2025.05.12-17.04.43:593][787]LogSlate: Window 'Salvar nível como' being destroyed
+[2025.05.12-17.04.43:654][787]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2025.05.12-17.04.43:659][787]LogSavePackage: Moving output files for package: /Game/FlashCard
+[2025.05.12-17.04.43:659][787]LogSavePackage: Moving '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Saved/FlashCard1E77A49145A1ED4E925037906BEABA01.tmp' to '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/FlashCard.umap'
+[2025.05.12-17.04.43:673][787]LogFileHelpers: Saving map 'FlashCard' took 0.075
+[2025.05.12-17.04.43:673][787]Cmd: MAP LOAD FILE="../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/FlashCard.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.05.12-17.04.43:686][787]LogWorld: UWorld::CleanupWorld for FlashCard, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.04.43:687][787]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.04.43:701][787]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.05.12-17.04.43:703][787]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2025.05.12-17.04.43:704][787]LogStreaming: Display: FlushAsyncLoading(680): 1 QueuedPackages, 0 AsyncPackages
+[2025.05.12-17.04.43:705][787]LogAudio: Display: Audio Device (ID: 1) registered with world 'FlashCard'.
+[2025.05.12-17.04.43:705][787]LogChaosDD: Creating Chaos Debug Draw Scene for world FlashCard
+[2025.05.12-17.04.43:713][787]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.05.12-17.04.43:728][787]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2025.05.12-17.04.43:734][787]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.05.12-17.04.43:734][787]MapCheck: Verificação do mapa concluída: 0 erro(s), 0 aviso(s), levou 0,041ms para ser concluída.
+[2025.05.12-17.04.43:736][787]LogAssetRegistry: Warning: C:/Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/FlashCard.umap: package was marked as deleted in editor, but has been modified on disk. It will once again be returned from AssetRegistry queries.
+[2025.05.12-17.04.43:766][787]LogContentValidation: Display: Starting to validate 1 assets
+[2025.05.12-17.04.43:766][787]LogContentValidation: Enabled validators:
+[2025.05.12-17.04.43:766][787]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.05.12-17.04.43:766][787]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.05.12-17.04.43:766][787]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.05.12-17.04.43:766][787]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.05.12-17.04.43:766][787]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.05.12-17.04.43:766][787]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.05.12-17.04.43:767][787]AssetCheck: /Game/FlashCard Validando ativo
+[2025.05.12-17.05.58:877][245]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2485.924316
+[2025.05.12-17.05.59:059][267]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.05.12-17.05.59:059][267]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2486.097412, Update Interval: 349.575500
+[2025.05.12-17.06.12:436][852]LogSlate: Window 'Adicionar Classe C++' being destroyed
+[2025.05.12-17.06.37:154][792]LogSlate: Window 'Visualizador de estruturas' being destroyed
+[2025.05.12-17.06.37:157][792]LogSlate: Window 'Visualizador de estruturas' being destroyed
+[2025.05.12-17.08.32:763][725]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.05.12-17.08.32:790][725]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Início] ([2] browsable assets)...
+[2025.05.12-17.08.32:793][725]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Início.Início]
+[2025.05.12-17.08.32:793][725]OBJ SavePackage: Finished generating thumbnails for package [/Game/Início]
+[2025.05.12-17.08.32:793][725]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Início" FILE="../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/Início.uasset" SILENT=true
+[2025.05.12-17.08.32:796][725]LogSavePackage: Moving output files for package: /Game/Início
+[2025.05.12-17.08.32:797][725]LogSavePackage: Moving '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Saved/InícioB81E1B0B4D349463F09F40B350E998CF.tmp' to '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/Início.uasset'
+[2025.05.12-17.08.32:804][725]LogFileHelpers: InternalPromptForCheckoutAndSave took 40.316 ms (total: 159.801 ms)
+[2025.05.12-17.08.32:831][725]LogContentValidation: Display: Starting to validate 1 assets
+[2025.05.12-17.08.32:832][725]LogContentValidation: Enabled validators:
+[2025.05.12-17.08.32:832][725]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.05.12-17.08.32:832][725]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.05.12-17.08.32:832][725]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.05.12-17.08.32:832][725]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.05.12-17.08.32:832][725]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.05.12-17.08.32:832][725]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.05.12-17.08.32:832][725]AssetCheck: /Game/Início Validando ativo
+[2025.05.12-17.09.43:182][ 17]Cmd: language=en
+[2025.05.12-17.09.43:187][ 17]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2025.05.12-17.09.43:187][ 17]LogSlate: FontCache flush requested. Reason: Culture for localization was changed
+[2025.05.12-17.09.43:510][ 17]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.09.43:514][ 17]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.09.43:519][ 18]LogSlate: Took 0.000173 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2025.05.12-17.09.43:522][ 18]LogSlate: Took 0.000148 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2025.05.12-17.09.43:522][ 18]LogSlate: Took 0.000070 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2025.05.12-17.09.46:768][280]LogSlate: Took 0.000159 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2025.05.12-17.09.46:769][280]LogSlate: Took 0.000096 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2025.05.12-17.09.46:770][280]LogSlate: Took 0.000084 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2025.05.12-17.10.05:990][486]Cmd: language=en
+[2025.05.12-17.12.11:199][614]LogEditorTransaction: Undo Add Node
+[2025.05.12-17.12.18:851][489]LogEditorTransaction: Undo Move Node
+[2025.05.12-17.12.19:459][528]LogEditorTransaction: Undo Add Node
+[2025.05.12-17.12.27:181][434]LogEditorTransaction: Undo Rename Node
+[2025.05.12-17.12.43:272][327]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2890.311523
+[2025.05.12-17.12.43:456][349]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.05.12-17.12.43:456][349]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2890.486328, Update Interval: 342.161316
+[2025.05.12-17.13.39:590][561]LogEditorTransaction: Undo Add New Event Dispatcher
+[2025.05.12-17.14.00:904][ 61]LogEditorTransaction: Undo Create Pin Link
+[2025.05.12-17.14.39:351][604]LogEditorTransaction: Undo Change String Pin Value
+[2025.05.12-17.14.39:679][620]LogEditorTransaction: Undo Move Node
+[2025.05.12-17.14.40:192][668]LogEditorTransaction: Undo Create Pin Link
+[2025.05.12-17.15.18:615][233]LogBlueprint: Error: [AssetLog] C:\Users\Thami\Pi---Poliedro-flashcards\Pi---Poliedro-flashcards\FlashCards\Content\Início.uasset: [Compiler] Event Dispatcher pin is not connected  Bind Event to On Clicked
+[2025.05.12-17.15.18:664][233]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2025.05.12-17.16.15:429][117]LogEditorTransaction: Undo Move Node
+[2025.05.12-17.16.16:073][160]LogEditorTransaction: Undo Add Node
+[2025.05.12-17.16.43:338][847]LogSlate: Took 0.000183 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2025.05.12-17.16.45:736][132]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2025.05.12-17.16.47:339][132]LogSlate: Window 'Save Content' being destroyed
+[2025.05.12-17.16.49:486][382]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.05.12-17.16.49:493][382]LogPlayLevel: [PlayLevel] Compiling TelaMateria before play...
+[2025.05.12-17.16.49:494][382]LogBlueprint: Warning: [AssetLog] C:\Users\Thami\Pi---Poliedro-flashcards\Pi---Poliedro-flashcards\FlashCards\Content\TelaMateria.uasset: [Compiler] On Clicked (BtJogar)  does not have a valid matching component!
+[2025.05.12-17.16.49:588][382]LogPlayLevel: [PlayLevel] Compiling Início before play...
+[2025.05.12-17.16.49:636][382]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2025.05.12-17.16.49:638][382]LogPlayLevel: PlayLevel: Blueprint regeneration took 146 ms (2 blueprints)
+[2025.05.12-17.16.49:643][382]LogOnline: OSS: Created online subsystem instance for: NULL
+[2025.05.12-17.16.49:643][382]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+[2025.05.12-17.16.49:643][382]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.16.49:644][382]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001083s)
+[2025.05.12-17.16.49:644][382]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FlashCard.FlashCard to /Game/UEDPIE_0_FlashCard.FlashCard (0.001126s)
+[2025.05.12-17.16.49:662][382]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2025.05.12-17.16.49:663][382]LogChaosDD: Creating Chaos Debug Draw Scene for world FlashCard
+[2025.05.12-17.16.49:664][382]LogPlayLevel: PIE: World Init took: (0.001389s)
+[2025.05.12-17.16.49:665][382]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2025.05.12-17.16.49:665][382]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.05.12-17.16.49:665][382]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.05.12-17.16.49:665][382]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.05.12-17.16.49:665][382]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.05.12-17.16.49:665][382]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.05.12-17.16.49:665][382]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.05.12-17.16.49:665][382]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.05.12-17.16.49:665][382]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.05.12-17.16.49:665][382]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.05.12-17.16.49:665][382]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.05.12-17.16.49:665][382]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.05.12-17.16.49:667][382]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.05.12-17.16.49:685][382]LogAudioMixer: Display: Using Audio Hardware Device Alto-falantes (Realtek(R) Audio)
+[2025.05.12-17.16.49:686][382]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.05.12-17.16.49:686][382]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.05.12-17.16.49:686][382]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.05.12-17.16.49:686][382]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=2
+[2025.05.12-17.16.49:686][382]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2025.05.12-17.16.49:688][382]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2025.05.12-17.16.49:688][382]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=2
+[2025.05.12-17.16.49:688][382]LogInit: FAudioDevice initialized with ID 2.
+[2025.05.12-17.16.49:688][382]LogAudio: Display: Audio Device (ID: 2) registered with world 'FlashCard'.
+[2025.05.12-17.16.49:688][382]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 2
+[2025.05.12-17.16.49:692][382]LogLoad: Game class is 'GameModeBase'
+[2025.05.12-17.16.49:692][382]LogWorld: Bringing World /Game/UEDPIE_0_FlashCard.FlashCard up for play (max tick rate 0) at 2025.05.12-14.16.49
+[2025.05.12-17.16.49:693][382]LogWorld: Bringing up level for play took: 0.000278
+[2025.05.12-17.16.49:694][382]LogOnline: OSS: Created online subsystem instance for: :Context_5
+[2025.05.12-17.16.49:701][382]PIE: Server logged in
+[2025.05.12-17.16.49:702][382]PIE: Play in editor total start time 0,211 seconds.
+[2025.05.12-17.16.51:332][563]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.16.51:332][563]LogWorld: BeginTearingDown for /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.16.51:332][563]LogWorld: UWorld::CleanupWorld for FlashCard, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.16.51:332][563]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.16.51:335][563]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.05.12-17.16.51:340][563]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.16.51:356][563]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.16.51:356][563]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2025.05.12-17.16.51:356][563]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2025.05.12-17.16.51:359][563]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2025.05.12-17.16.51:364][563]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2025.05.12-17.16.51:410][567]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2025.05.12-17.18.47:681][719]LogContentBrowser: Attempting asset rename: Início -> TelaInicio
+[2025.05.12-17.18.47:743][719]LogMetaData: Removing '/Game/TelaInicio.TelaInicio_C' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:743][719]LogMetaData: Removing '/Game/TelaInicio.TelaInicio:EventGraph.K2Node_Event_0' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.TelaInicio:EventGraph.K2Node_Event_1' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.TelaInicio:EventGraph.K2Node_Event_2' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.TelaInicio:QuitGame.K2Node_FunctionEntry_0' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.TelaInicio:StartGame.K2Node_FunctionEntry_0' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.SKEL_TelaInicio_C' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.TelaInicio_C:Construct' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.TelaInicio:BeginPlay.K2Node_FunctionEntry_0' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.SKEL_TelaInicio_C:Construct' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.SKEL_TelaInicio_C:StartGame_Event' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.SKEL_TelaInicio_C:QuitGame_Event' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:744][719]LogMetaData: Removing '/Game/TelaInicio.SKEL_TelaInicio_C:BeginPlay_Event' ref from Metadata '/Game/Início.PackageMetaData'
+[2025.05.12-17.18.47:752][719]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.05.12-17.18.47:752][719]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/TelaInicio] ([2] browsable assets)...
+[2025.05.12-17.18.47:756][719]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/TelaInicio.TelaInicio]
+[2025.05.12-17.18.47:756][719]OBJ SavePackage: Finished generating thumbnails for package [/Game/TelaInicio]
+[2025.05.12-17.18.47:756][719]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TelaInicio" FILE="../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/TelaInicio.uasset" SILENT=true
+[2025.05.12-17.18.47:763][719]LogSavePackage: Moving output files for package: /Game/TelaInicio
+[2025.05.12-17.18.47:763][719]LogSavePackage: Moving '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Saved/TelaInicio957F1A2E40727E9F6F059888F3D7EF77.tmp' to '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/TelaInicio.uasset'
+[2025.05.12-17.18.47:767][719]LogFileHelpers: InternalPromptForCheckoutAndSave took 15.095 ms (total: 174.896 ms)
+[2025.05.12-17.18.47:808][719]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2025.05.12-17.18.47:829][719]LogUObjectHash: Compacting FUObjectHashTables data took   1.06ms
+[2025.05.12-17.18.47:847][719]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2025.05.12-17.18.47:876][719]LogContentValidation: Display: Starting to validate 1 assets
+[2025.05.12-17.18.47:876][719]LogContentValidation: Enabled validators:
+[2025.05.12-17.18.47:876][719]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.05.12-17.18.47:876][719]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.05.12-17.18.47:876][719]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.05.12-17.18.47:876][719]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.05.12-17.18.47:876][719]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.05.12-17.18.47:876][719]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.05.12-17.18.47:876][719]AssetCheck: /Game/TelaInicio Validating asset
+[2025.05.12-17.19.10:982][ 95]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3278.032471
+[2025.05.12-17.19.11:164][117]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.05.12-17.19.11:165][117]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3278.207520, Update Interval: 326.889862
+[2025.05.12-17.19.54:818][967]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.05.12-17.19.54:823][967]LogPlayLevel: [PlayLevel] Compiling TelaInicio before play...
+[2025.05.12-17.19.54:870][967]LogUObjectHash: Compacting FUObjectHashTables data took   1.28ms
+[2025.05.12-17.19.54:874][967]LogPlayLevel: PlayLevel: Blueprint regeneration took 51 ms (1 blueprints)
+[2025.05.12-17.19.54:874][967]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.19.54:874][967]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000565s)
+[2025.05.12-17.19.54:874][967]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FlashCard.FlashCard to /Game/UEDPIE_0_FlashCard.FlashCard (0.000591s)
+[2025.05.12-17.19.54:893][967]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2025.05.12-17.19.54:894][967]LogChaosDD: Creating Chaos Debug Draw Scene for world FlashCard
+[2025.05.12-17.19.54:895][967]LogPlayLevel: PIE: World Init took: (0.001275s)
+[2025.05.12-17.19.54:896][967]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2025.05.12-17.19.54:896][967]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.05.12-17.19.54:896][967]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.05.12-17.19.54:896][967]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.05.12-17.19.54:896][967]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.05.12-17.19.54:896][967]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.05.12-17.19.54:896][967]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.05.12-17.19.54:896][967]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.05.12-17.19.54:896][967]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.05.12-17.19.54:896][967]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.05.12-17.19.54:896][967]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.05.12-17.19.54:896][967]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.05.12-17.19.54:899][967]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.05.12-17.19.54:917][967]LogAudioMixer: Display: Using Audio Hardware Device Alto-falantes (Realtek(R) Audio)
+[2025.05.12-17.19.54:917][967]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.05.12-17.19.54:917][967]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.05.12-17.19.54:917][967]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.05.12-17.19.54:917][967]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2025.05.12-17.19.54:917][967]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2025.05.12-17.19.54:919][967]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2025.05.12-17.19.54:919][967]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2025.05.12-17.19.54:919][967]LogInit: FAudioDevice initialized with ID 3.
+[2025.05.12-17.19.54:919][967]LogAudio: Display: Audio Device (ID: 3) registered with world 'FlashCard'.
+[2025.05.12-17.19.54:919][967]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2025.05.12-17.19.54:922][967]LogLoad: Game class is 'GameModeBase'
+[2025.05.12-17.19.54:922][967]LogWorld: Bringing World /Game/UEDPIE_0_FlashCard.FlashCard up for play (max tick rate 0) at 2025.05.12-14.19.54
+[2025.05.12-17.19.54:922][967]LogWorld: Bringing up level for play took: 0.000290
+[2025.05.12-17.19.54:924][967]LogOnline: OSS: Created online subsystem instance for: :Context_6
+[2025.05.12-17.19.54:926][967]PIE: Server logged in
+[2025.05.12-17.19.54:927][967]PIE: Play in editor total start time 0,104 seconds.
+[2025.05.12-17.20.05:711][251]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.20.05:711][251]LogWorld: BeginTearingDown for /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.20.05:711][251]LogWorld: UWorld::CleanupWorld for FlashCard, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.20.05:711][251]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.20.05:714][251]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.05.12-17.20.05:720][251]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.20.05:738][251]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.20.05:738][251]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2025.05.12-17.20.05:738][251]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2025.05.12-17.20.05:740][251]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2025.05.12-17.20.05:747][251]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2025.05.12-17.20.05:783][253]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2025.05.12-17.20.08:678][599]Cmd: SELECT NONE
+[2025.05.12-17.20.09:739][726]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.05.12-17.20.09:744][726]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.05.12-17.20.09:770][726]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.20.09:771][726]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000582s)
+[2025.05.12-17.20.09:771][726]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FlashCard.FlashCard to /Game/UEDPIE_0_FlashCard.FlashCard (0.000611s)
+[2025.05.12-17.20.09:790][726]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2025.05.12-17.20.09:791][726]LogChaosDD: Creating Chaos Debug Draw Scene for world FlashCard
+[2025.05.12-17.20.09:793][726]LogPlayLevel: PIE: World Init took: (0.001199s)
+[2025.05.12-17.20.09:793][726]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2025.05.12-17.20.09:793][726]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.05.12-17.20.09:793][726]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.05.12-17.20.09:793][726]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.05.12-17.20.09:793][726]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.05.12-17.20.09:793][726]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.05.12-17.20.09:793][726]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.05.12-17.20.09:793][726]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.05.12-17.20.09:793][726]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.05.12-17.20.09:793][726]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.05.12-17.20.09:793][726]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.05.12-17.20.09:793][726]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.05.12-17.20.09:796][726]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.05.12-17.20.09:812][726]LogAudioMixer: Display: Using Audio Hardware Device Alto-falantes (Realtek(R) Audio)
+[2025.05.12-17.20.09:813][726]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.05.12-17.20.09:813][726]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.05.12-17.20.09:813][726]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.05.12-17.20.09:813][726]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2025.05.12-17.20.09:813][726]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2025.05.12-17.20.09:816][726]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2025.05.12-17.20.09:816][726]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2025.05.12-17.20.09:816][726]LogInit: FAudioDevice initialized with ID 4.
+[2025.05.12-17.20.09:816][726]LogAudio: Display: Audio Device (ID: 4) registered with world 'FlashCard'.
+[2025.05.12-17.20.09:816][726]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2025.05.12-17.20.09:818][726]LogLoad: Game class is 'GameModeBase'
+[2025.05.12-17.20.09:819][726]LogWorld: Bringing World /Game/UEDPIE_0_FlashCard.FlashCard up for play (max tick rate 0) at 2025.05.12-14.20.09
+[2025.05.12-17.20.09:819][726]LogWorld: Bringing up level for play took: 0.000256
+[2025.05.12-17.20.09:820][726]LogOnline: OSS: Created online subsystem instance for: :Context_7
+[2025.05.12-17.20.09:821][726]PIE: Server logged in
+[2025.05.12-17.20.09:822][726]PIE: Play in editor total start time 0,078 seconds.
+[2025.05.12-17.20.10:801][833]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.20.10:801][833]LogWorld: BeginTearingDown for /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.20.10:801][833]LogWorld: UWorld::CleanupWorld for FlashCard, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.20.10:801][833]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.20.10:804][833]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.05.12-17.20.10:809][833]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.20.10:826][833]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.20.10:826][833]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2025.05.12-17.20.10:826][833]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2025.05.12-17.20.10:829][833]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2025.05.12-17.20.10:834][833]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2025.05.12-17.20.10:868][836]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2025.05.12-17.20.15:479][380]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.05.12-17.20.15:483][380]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.05.12-17.20.15:483][380]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.20.15:484][380]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000585s)
+[2025.05.12-17.20.15:484][380]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FlashCard.FlashCard to /Game/UEDPIE_0_FlashCard.FlashCard (0.000608s)
+[2025.05.12-17.20.15:503][380]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2025.05.12-17.20.15:505][380]LogChaosDD: Creating Chaos Debug Draw Scene for world FlashCard
+[2025.05.12-17.20.15:506][380]LogPlayLevel: PIE: World Init took: (0.001258s)
+[2025.05.12-17.20.15:507][380]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2025.05.12-17.20.15:507][380]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.05.12-17.20.15:507][380]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.05.12-17.20.15:507][380]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.05.12-17.20.15:507][380]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.05.12-17.20.15:507][380]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.05.12-17.20.15:507][380]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.05.12-17.20.15:507][380]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.05.12-17.20.15:507][380]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.05.12-17.20.15:507][380]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.05.12-17.20.15:507][380]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.05.12-17.20.15:507][380]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.05.12-17.20.15:509][380]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.05.12-17.20.15:525][380]LogAudioMixer: Display: Using Audio Hardware Device Alto-falantes (Realtek(R) Audio)
+[2025.05.12-17.20.15:525][380]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.05.12-17.20.15:525][380]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.05.12-17.20.15:525][380]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.05.12-17.20.15:525][380]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2025.05.12-17.20.15:525][380]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2025.05.12-17.20.15:528][380]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2025.05.12-17.20.15:528][380]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2025.05.12-17.20.15:528][380]LogInit: FAudioDevice initialized with ID 5.
+[2025.05.12-17.20.15:528][380]LogAudio: Display: Audio Device (ID: 5) registered with world 'FlashCard'.
+[2025.05.12-17.20.15:528][380]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2025.05.12-17.20.15:530][380]LogLoad: Game class is 'GameModeBase'
+[2025.05.12-17.20.15:530][380]LogWorld: Bringing World /Game/UEDPIE_0_FlashCard.FlashCard up for play (max tick rate 0) at 2025.05.12-14.20.15
+[2025.05.12-17.20.15:530][380]LogWorld: Bringing up level for play took: 0.000288
+[2025.05.12-17.20.15:532][380]LogOnline: OSS: Created online subsystem instance for: :Context_8
+[2025.05.12-17.20.15:533][380]PIE: Server logged in
+[2025.05.12-17.20.15:534][380]PIE: Play in editor total start time 0,051 seconds.
+[2025.05.12-17.20.21:011][ 27]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.20.21:011][ 27]LogWorld: BeginTearingDown for /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.20.21:011][ 27]LogWorld: UWorld::CleanupWorld for FlashCard, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.20.21:011][ 27]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.20.21:013][ 27]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.05.12-17.20.21:018][ 27]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.20.21:034][ 27]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.20.21:034][ 27]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2025.05.12-17.20.21:034][ 27]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.05.12-17.20.21:037][ 27]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.05.12-17.20.21:042][ 27]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2025.05.12-17.20.21:091][ 32]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2025.05.12-17.20.22:818][238]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.05.12-17.20.22:822][238]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.05.12-17.20.22:823][238]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.20.22:823][238]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000547s)
+[2025.05.12-17.20.22:823][238]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FlashCard.FlashCard to /Game/UEDPIE_0_FlashCard.FlashCard (0.000572s)
+[2025.05.12-17.20.22:839][238]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2025.05.12-17.20.22:841][238]LogChaosDD: Creating Chaos Debug Draw Scene for world FlashCard
+[2025.05.12-17.20.22:842][238]LogPlayLevel: PIE: World Init took: (0.001187s)
+[2025.05.12-17.20.22:843][238]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2025.05.12-17.20.22:843][238]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.05.12-17.20.22:843][238]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.05.12-17.20.22:843][238]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.05.12-17.20.22:843][238]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.05.12-17.20.22:843][238]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.05.12-17.20.22:843][238]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.05.12-17.20.22:843][238]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.05.12-17.20.22:843][238]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.05.12-17.20.22:843][238]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.05.12-17.20.22:843][238]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.05.12-17.20.22:843][238]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.05.12-17.20.22:844][238]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.05.12-17.20.22:862][238]LogAudioMixer: Display: Using Audio Hardware Device Alto-falantes (Realtek(R) Audio)
+[2025.05.12-17.20.22:862][238]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.05.12-17.20.22:862][238]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.05.12-17.20.22:862][238]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.05.12-17.20.22:862][238]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2025.05.12-17.20.22:862][238]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2025.05.12-17.20.22:864][238]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2025.05.12-17.20.22:864][238]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2025.05.12-17.20.22:864][238]LogInit: FAudioDevice initialized with ID 6.
+[2025.05.12-17.20.22:864][238]LogAudio: Display: Audio Device (ID: 6) registered with world 'FlashCard'.
+[2025.05.12-17.20.22:864][238]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2025.05.12-17.20.22:866][238]LogLoad: Game class is 'GameModeBase'
+[2025.05.12-17.20.22:866][238]LogWorld: Bringing World /Game/UEDPIE_0_FlashCard.FlashCard up for play (max tick rate 0) at 2025.05.12-14.20.22
+[2025.05.12-17.20.22:867][238]LogWorld: Bringing up level for play took: 0.000279
+[2025.05.12-17.20.22:868][238]LogOnline: OSS: Created online subsystem instance for: :Context_9
+[2025.05.12-17.20.22:870][238]PIE: Server logged in
+[2025.05.12-17.20.22:871][238]PIE: Play in editor total start time 0,049 seconds.
+[2025.05.12-17.20.36:201][744]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.20.36:202][744]LogWorld: BeginTearingDown for /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.20.36:202][744]LogWorld: UWorld::CleanupWorld for FlashCard, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.20.36:202][744]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.20.36:204][744]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.05.12-17.20.36:209][744]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.20.36:229][744]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.20.36:229][744]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2025.05.12-17.20.36:229][744]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.05.12-17.20.36:231][744]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.05.12-17.20.36:237][744]LogUObjectHash: Compacting FUObjectHashTables data took   1.03ms
+[2025.05.12-17.20.36:280][747]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2025.05.12-17.21.01:193][699]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2025.05.12-17.21.01:194][699]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FlashCard' took 0.021
+[2025.05.12-17.21.01:194][699]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/TelaInicio] ([2] browsable assets)...
+[2025.05.12-17.21.01:197][699]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/TelaInicio.TelaInicio]
+[2025.05.12-17.21.01:197][699]OBJ SavePackage: Finished generating thumbnails for package [/Game/TelaInicio]
+[2025.05.12-17.21.01:203][699]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/TelaInicio_Auto2
+[2025.05.12-17.21.01:203][699]LogSavePackage: Moving '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Saved/TelaInicio_Auto26A42C23E4D0CE0C202E680905DA4E711.tmp' to '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Saved/Autosaves/Game/TelaInicio_Auto2.uasset'
+[2025.05.12-17.21.01:203][699]LogFileHelpers: Auto-saving content packages took 0.010
+[2025.05.12-17.22.02:764][441]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.05.12-17.22.02:770][441]LogPlayLevel: [PlayLevel] Compiling TelaInicio before play...
+[2025.05.12-17.22.02:819][441]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2025.05.12-17.22.02:822][441]LogPlayLevel: PlayLevel: Blueprint regeneration took 52 ms (1 blueprints)
+[2025.05.12-17.22.02:822][441]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.22.02:822][441]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000543s)
+[2025.05.12-17.22.02:822][441]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FlashCard.FlashCard to /Game/UEDPIE_0_FlashCard.FlashCard (0.000566s)
+[2025.05.12-17.22.02:840][441]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2025.05.12-17.22.02:841][441]LogChaosDD: Creating Chaos Debug Draw Scene for world FlashCard
+[2025.05.12-17.22.02:842][441]LogPlayLevel: PIE: World Init took: (0.001189s)
+[2025.05.12-17.22.02:843][441]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2025.05.12-17.22.02:843][441]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.05.12-17.22.02:843][441]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.05.12-17.22.02:843][441]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.05.12-17.22.02:843][441]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.05.12-17.22.02:843][441]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.05.12-17.22.02:843][441]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.05.12-17.22.02:843][441]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.05.12-17.22.02:843][441]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.05.12-17.22.02:843][441]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.05.12-17.22.02:843][441]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.05.12-17.22.02:843][441]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.05.12-17.22.02:845][441]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.05.12-17.22.02:862][441]LogAudioMixer: Display: Using Audio Hardware Device Alto-falantes (Realtek(R) Audio)
+[2025.05.12-17.22.02:862][441]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.05.12-17.22.02:863][441]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.05.12-17.22.02:863][441]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.05.12-17.22.02:863][441]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2025.05.12-17.22.02:863][441]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2025.05.12-17.22.02:865][441]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2025.05.12-17.22.02:865][441]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2025.05.12-17.22.02:865][441]LogInit: FAudioDevice initialized with ID 7.
+[2025.05.12-17.22.02:865][441]LogAudio: Display: Audio Device (ID: 7) registered with world 'FlashCard'.
+[2025.05.12-17.22.02:865][441]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2025.05.12-17.22.02:868][441]LogLoad: Game class is 'GameModeBase'
+[2025.05.12-17.22.02:868][441]LogWorld: Bringing World /Game/UEDPIE_0_FlashCard.FlashCard up for play (max tick rate 0) at 2025.05.12-14.22.02
+[2025.05.12-17.22.02:869][441]LogWorld: Bringing up level for play took: 0.000281
+[2025.05.12-17.22.02:870][441]LogOnline: OSS: Created online subsystem instance for: :Context_10
+[2025.05.12-17.22.02:872][441]PIE: Server logged in
+[2025.05.12-17.22.02:873][441]PIE: Play in editor total start time 0,104 seconds.
+[2025.05.12-17.22.10:841][343]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.22.10:841][343]LogWorld: BeginTearingDown for /Game/UEDPIE_0_FlashCard
+[2025.05.12-17.22.10:841][343]LogWorld: UWorld::CleanupWorld for FlashCard, bSessionEnded=true, bCleanupResources=true
+[2025.05.12-17.22.10:841][343]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.22.10:844][343]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.05.12-17.22.10:848][343]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.05.12-17.22.10:866][343]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.05.12-17.22.10:866][343]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2025.05.12-17.22.10:866][343]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2025.05.12-17.22.10:869][343]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2025.05.12-17.22.10:874][343]LogUObjectHash: Compacting FUObjectHashTables data took   1.07ms
+[2025.05.12-17.22.10:920][347]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2025.05.12-17.23.54:368][220]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2025.05.12-17.23.54:372][220]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.05.12-17.23.54:396][220]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/TelaInicio] ([2] browsable assets)...
+[2025.05.12-17.23.54:398][220]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/TelaInicio.TelaInicio]
+[2025.05.12-17.23.54:398][220]OBJ SavePackage: Finished generating thumbnails for package [/Game/TelaInicio]
+[2025.05.12-17.23.54:398][220]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TelaInicio" FILE="../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/TelaInicio.uasset" SILENT=true
+[2025.05.12-17.23.54:404][220]LogSavePackage: Moving output files for package: /Game/TelaInicio
+[2025.05.12-17.23.54:404][220]LogSavePackage: Moving '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Saved/TelaInicio93C994DE4DC6275D383716930FA1317E.tmp' to '../../../../Users/Thami/Pi---Poliedro-flashcards/Pi---Poliedro-flashcards/FlashCards/Content/TelaInicio.uasset'
+[2025.05.12-17.23.54:411][220]LogFileHelpers: InternalPromptForCheckoutAndSave took 39.630 ms (total: 214.526 ms)
+[2025.05.12-17.23.54:435][220]LogContentValidation: Display: Starting to validate 1 assets
+[2025.05.12-17.23.54:435][220]LogContentValidation: Enabled validators:
+[2025.05.12-17.23.54:435][220]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.05.12-17.23.54:435][220]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.05.12-17.23.54:435][220]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.05.12-17.23.54:435][220]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.05.12-17.23.54:435][220]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.05.12-17.23.54:435][220]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.05.12-17.23.54:435][220]AssetCheck: /Game/TelaInicio Validating asset
