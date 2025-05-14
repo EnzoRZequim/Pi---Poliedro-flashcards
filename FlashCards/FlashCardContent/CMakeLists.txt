@@ -9,8 +9,9 @@ qt6_add_qml_module(FlashCardContent
     VERSION 1.0
     RESOURCE_PREFIX "/qt/qml"
     QML_FILES
-        "App.qml"
         "TelaInicio.ui.qml"
+        "TelaPopUpSair.ui.qml"
+        "App.qml"
     RESOURCES
         "images/Logo_Poliedro_Horiz_EDUCACAO.webp"
 )
