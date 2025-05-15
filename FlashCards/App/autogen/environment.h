@@ -8,8 +8,8 @@
 #include <QGuiApplication>
 #include "qqmlextensionplugin.h"
 
-Q_IMPORT_QML_PLUGIN(FlashCardPlugin)
 Q_IMPORT_QML_PLUGIN(FlashCardContentPlugin)
+Q_IMPORT_QML_PLUGIN(FlashCardPlugin)
 
 const char mainQmlFile[] = "qrc:/qt/qml/FlashCardContent/App.qml";
 
