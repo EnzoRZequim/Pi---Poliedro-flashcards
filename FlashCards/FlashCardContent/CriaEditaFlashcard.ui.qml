@@ -17,44 +17,8 @@ Rectangle {
     height: Constants.height
     color: "#ffffff"
 
-    Button {
-        id: btEscolheMateria
-        x: 139
-        y: 411
-        width: 490
-        height: 100
-        text: qsTr("Materia")
-        font.pointSize: 64
-        font.family: "Arial"
-        font.bold: true
-    }
-
-    Button {
-        id: btEscolheSubmateria
-        x: 656
-        y: 411
-        width: 521
-        height: 100
-        text: qsTr("Sub-materia")
-        font.pointSize: 64
-        font.family: "Arial"
-        font.bold: true
-    }
-
     Item {
         id: __materialLibrary__
-    }
-
-    Button {
-        id: btEscolheDificuldade
-        x: 1259
-        y: 411
-        width: 490
-        height: 100
-        text: qsTr("Dificuldade")
-        font.pointSize: 64
-        font.family: "Arial"
-        font.bold: true
     }
 
     Rectangle {
@@ -156,6 +120,43 @@ Rectangle {
         y: 22
         source: "../images/home 2.png"
         fillMode: Image.PreserveAspectFit
+    }
+
+    ComboBox {
+        id: comboBox
+        x: 1312
+        y: 411
+        width: 437
+        height: 100
+        z: 1
+        font.bold: true
+        font.family: "Arial"
+        font.pointSize: 52
+        displayText: "Dificuldade"
+    }
+
+    ComboBox {
+        id: comboBox1
+        x: 654
+        y: 411
+        width: 521
+        height: 100
+        displayText: "Sub-Materia"
+        font.family: "Arial"
+        font.pointSize: 52
+        font.bold: true
+    }
+
+    ComboBox {
+        id: comboBox2
+        x: 139
+        y: 411
+        width: 490
+        height: 100
+        displayText: "Materia"
+        font.bold: true
+        font.family: "Arial"
+        font.pointSize: 52
     }
     states: [
         State {
