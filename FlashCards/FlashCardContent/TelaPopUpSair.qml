@@ -17,6 +17,13 @@ Rectangle {
     height: Constants.height
     color: "#ffffff"
 
+    // Função para navegar para outra tela
+    function navigateTo(page) {
+        if (stackView) {  // Verifica se o StackView está disponível
+            stackView.push(page + ".qml");
+        }
+    }
+
     Button {
         id: btSair
         x: 715
@@ -127,6 +134,8 @@ Rectangle {
         font.family: "Arial"
         font.bold: true
         flat: false
+
+        onClicked: navigateTo("TelaInicio")
     }
     states: [
         State {

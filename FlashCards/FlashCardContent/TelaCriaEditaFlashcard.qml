@@ -17,6 +17,13 @@ Rectangle {
     height: Constants.height
     color: "#ffffff"
 
+    // Função para navegar para outra tela
+    function navigateTo(page) {
+        if (stackView) {  // Verifica se o StackView está disponível
+            stackView.push(page + ".qml");
+        }
+    }
+
     Item {
         id: __materialLibrary__
     }
@@ -112,6 +119,8 @@ Rectangle {
         width: 133
         height: 114
         text: qsTr("")
+
+        onClicked: navigateTo("TelaInicio")
     }
 
     Image {
@@ -131,8 +140,9 @@ Rectangle {
         z: 1
         font.bold: true
         font.family: "Arial"
-        font.pointSize: 52
+        font.pointSize: 42
         displayText: "Dificuldade"
+        model: ["Fácil", "Médio", "Difícil"]
     }
 
     ComboBox {
@@ -145,6 +155,7 @@ Rectangle {
         font.bold: true
         font.family: "Arial"
         font.pointSize: 52
+        model: ["Matemática", "História", "Geografia"]
     }
     states: [
         State {

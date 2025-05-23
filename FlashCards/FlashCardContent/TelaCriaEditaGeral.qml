@@ -17,6 +17,13 @@ Rectangle {
     height: Constants.height
     color: "#ffffff"
 
+    // Função para navegar para outra tela
+    function navigateTo(page) {
+        if (stackView) {  // Verifica se o StackView está disponível
+            stackView.push(page + ".qml");
+        }
+    }
+
     Button {
         id: btCriaFC
         x: 715
@@ -27,6 +34,8 @@ Rectangle {
         font.pointSize: 36
         font.family: "Arial"
         font.bold: true
+
+        onClicked: navigateTo("TelaCriaEditaFlashcard")
     }
 
     Item {
@@ -222,6 +231,8 @@ Rectangle {
         width: 133
         height: 114
         text: qsTr("")
+
+        onClicked: navigateTo("TelaInicio")
     }
 
     Image {

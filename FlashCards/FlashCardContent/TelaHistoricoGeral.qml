@@ -14,6 +14,13 @@ Item {
     width: 1920
     height: 1080
 
+    // Função para navegar para outra tela
+    function navigateTo(page) {
+        if (stackView) {  // Verifica se o StackView está disponível
+            stackView.push(page + ".qml");
+        }
+    }
+
     Rectangle {
         id: rectangle
         x: 0
@@ -29,6 +36,8 @@ Item {
             width: 133
             height: 114
             text: qsTr("")
+
+            onClicked: navigateTo("TelaInicio")
         }
     }
 
