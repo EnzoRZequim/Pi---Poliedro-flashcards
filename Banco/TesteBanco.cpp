@@ -6,7 +6,7 @@ using namespace std;
 
 static int callback(void *data, int argc, char **argv, char **azColName);
 
-int main() {
+/*int main() {
     sqlite3 *db;
     char* erro;
 
@@ -37,7 +37,7 @@ int main() {
 
 
     return 0;
-}
+}*/
 
 static int callback(void *data, int argc, char **argv, char **azColName)
 {

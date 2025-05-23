@@ -31,7 +31,7 @@ static void createTables()
             "Tempo_total int NOT NULL);"
         "CREATE TABLE IF NOT EXISTS Instancias ("
             "ID_Instancia int PRIMARY KEY UNIQUE,"
-            "ID_Run int NOT NULL,
+            "ID_Run int NOT NULL,"
             "ID_Flashcard int NOT NULL,"
             "Tempo_resposta int NOT NULL,"
             "Acertou BOOLEAN NOT NULL);"
@@ -132,6 +132,55 @@ static void insertInstancia(int id_run, int id_flashcard, int tempo_resposta, bo
     }
 }
 
+static void printTable(string tabela)
+{
+    sqlite3 *db;
+    char *erro;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT * FROM " + tabela + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        for (int i = 0; i < argc; i++)
+        {
+            cout << azColName[i] << " = " << argv[i] << endl;
+        }
+        cout << endl;
+        return 0;
+    }, NULL, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar dados: " << erro << endl;
+        sqlite3_free(erro);
+    }
+}
+
+static void clearTable(string tabela)
+{
+    sqlite3 *db;
+    char *erro;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string deleteSQL = "DELETE FROM " + tabela + ";";
+    banco = sqlite3_exec(db, deleteSQL.c_str(), NULL, 0, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao limpar tabela: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    else
+    {
+        cout << "Tabela limpa com sucesso!" << endl;
+    }
+}
+
+static void clearAll()
+{
+    clearTable("Flashcards");
+    clearTable("Materias");
+    clearTable("Runs");
+    clearTable("Instancias");
+}
+
 static int getMaxID(string tabela, string coluna)
 {
     sqlite3 *db;
@@ -149,4 +198,19 @@ static int getMaxID(string tabela, string coluna)
         return 0;
     }, &maxID, &erro);
     return maxID;
+}
+
+int main()
+{
+    createTables();
+    insertFlashcard("Qual é a capital da França?", "Paris", 1, 2, 0, 0, 0);
+    insertMateria("Geografia");
+    insertRun(80, 120);
+    insertInstancia(1, 1, 30, true);
+    printTable("Materias");
+    printTable("Runs");
+    printTable("Instancias");
+    clearAll();
+
+    return 0;
 }
