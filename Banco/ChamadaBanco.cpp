@@ -173,7 +173,7 @@ static void clearTable(string tabela)
     }
 }
 
-static void clearAll()
+static void clearAllTables()
 {
     clearTable("Flashcards");
     clearTable("Materias");
@@ -200,7 +200,7 @@ static void deleteTable(string tabela)
     }
 }
 
-static void deleteAll()
+static void deleteAllTables()
 {
     deleteTable("Flashcards");
     deleteTable("Materias");
@@ -229,7 +229,7 @@ static int getMaxID(string tabela, string coluna)
 
 int main()
 {
-    deleteAll();
+    deleteAllTables();
     createTables();
     insertFlashcard("Qual é a capital da França?", "Paris", 1, 2, 0, 0, 0);
     insertMateria("Geografia");
@@ -239,7 +239,7 @@ int main()
     printTable("Runs");
     printTable("Instancias");
     printTable("Flashcards");
-    clearAll();
+    clearAllTables();
 
     return 0;
 }
