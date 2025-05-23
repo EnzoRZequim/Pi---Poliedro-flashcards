@@ -8,7 +8,8 @@ add_library(sqlite3 STATIC Banco/sqlite/sqlite3.c)  # Compila o SQLite como est�
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Pi___Poliedro_flashcards
-        Banco/TesteBanco.cpp)
+        Banco/TesteBanco.cpp
+        Banco/ChamadaBanco.cpp)
 
 # Vincule o SQLite ao executável
 target_include_directories(Pi___Poliedro_flashcards PRIVATE Banco/sqlite)  # Inclui o diretório do SQLite
