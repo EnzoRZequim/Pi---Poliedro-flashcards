@@ -2,7 +2,7 @@ import QmlProject
 
 Project {
     mainFile: "FlashCardContent/App.qml"
-    mainUiFile: "FlashCardContent/TelaInicio.ui.qml"
+    mainUiFile: "FlashCardContent/TelaInicio.qml"
 
     /* Include .qml, .js, and image files from current directory and subdirectories */
     QmlFiles {

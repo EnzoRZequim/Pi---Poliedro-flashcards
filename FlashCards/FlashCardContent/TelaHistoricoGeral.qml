@@ -359,4 +359,8 @@ Item {
         source: "../images/lixo.png"
         fillMode: Image.PreserveAspectFit
     }
+
+    Item {
+        id: __materialLibrary__
+    }
 }

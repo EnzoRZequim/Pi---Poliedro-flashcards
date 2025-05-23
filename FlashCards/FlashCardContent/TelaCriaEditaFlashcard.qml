@@ -136,18 +136,6 @@ Rectangle {
     }
 
     ComboBox {
-        id: comboBox1
-        x: 654
-        y: 411
-        width: 521
-        height: 100
-        displayText: "Sub-Materia"
-        font.family: "Arial"
-        font.pointSize: 52
-        font.bold: true
-    }
-
-    ComboBox {
         id: comboBox2
         x: 139
         y: 411
