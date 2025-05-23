@@ -181,6 +181,33 @@ static void clearAll()
     clearTable("Instancias");
 }
 
+static void deleteTable(string tabela)
+{
+    sqlite3 *db;
+    char *erro;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string deleteSQL = "DROP TABLE IF EXISTS " + tabela + ";";
+    banco = sqlite3_exec(db, deleteSQL.c_str(), NULL, 0, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao deletar tabela: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    else
+    {
+        cout << "Tabela deletada com sucesso!" << endl;
+    }
+}
+
+static void deleteAll()
+{
+    deleteTable("Flashcards");
+    deleteTable("Materias");
+    deleteTable("Runs");
+    deleteTable("Instancias");
+}
+
 static int getMaxID(string tabela, string coluna)
 {
     sqlite3 *db;
@@ -202,6 +229,7 @@ static int getMaxID(string tabela, string coluna)
 
 int main()
 {
+    deleteAll();
     createTables();
     insertFlashcard("Qual é a capital da França?", "Paris", 1, 2, 0, 0, 0);
     insertMateria("Geografia");
@@ -210,6 +238,7 @@ int main()
     printTable("Materias");
     printTable("Runs");
     printTable("Instancias");
+    printTable("Flashcards");
     clearAll();
 
     return 0;
