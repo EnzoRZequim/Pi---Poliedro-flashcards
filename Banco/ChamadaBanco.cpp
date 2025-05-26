@@ -50,7 +50,7 @@ static void createTables()
     }
 }
 
-static void insertFlashcard(string pergunta, string resposta, int id_materia, int dificuldade, int acertos, int erros, int melhor_tempo_resposta)
+static void insertFlashcard(string pergunta, string resposta, int id_materia, int dificuldade)
 {
     sqlite3 *db;
     char *erro;
@@ -58,7 +58,7 @@ static void insertFlashcard(string pergunta, string resposta, int id_materia, in
 
     int banco = sqlite3_open("banco.db", &db);
     string insertSQL = "INSERT INTO Flashcards (ID_Flashcard, Pergunta, Resposta, ID_Materia, Dificuldade, Acertos, Erros, Melhor_tempo_resposta) VALUES ('"
-        + to_string(id) + "', '" + pergunta + "', '" + resposta + "', " + to_string(id_materia) + ", " + to_string(dificuldade) + ", " + to_string(acertos) + ", " + to_string(erros) + ", " + to_string(melhor_tempo_resposta) + ");";
+        + to_string(id) + "', '" + pergunta + "', '" + resposta + "', " + to_string(id_materia) + ", " + to_string(dificuldade) + ", 0, 0, 180);";
     banco = sqlite3_exec(db, insertSQL.c_str(), NULL, 0, &erro);
     if (banco != SQLITE_OK)
     {
@@ -262,8 +262,8 @@ int main()
 {
     deleteAllTables();
     createTables();
-    insertFlashcard("Qual é a capital da França?", "Paris", 1, 2, 0, 0, 0);
-    insertFlashcard("abc", "Paris", 3, 4, 0, 0, 0);
+    insertFlashcard("Qual é a capital da França?", "Paris", 1, 2);
+    insertFlashcard("abc", "Paris", 3, 4);
     insertMateria("Geografia");
     insertRun(80, 120);
     insertInstancia(1, 1, 30, true);
