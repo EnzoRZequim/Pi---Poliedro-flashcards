@@ -282,6 +282,11 @@ static int selectDificuldade (int id)
     return selectIntTabela(id, "Flashcards", "Dificuldade");
 }
 
+static string selectPergunta (int id)
+{
+    return selectStringTabela(id, "Flashcards", "Pergunta");
+}
+
 static boolean selectAcertou (int id)
 {
     sqlite3 *db;
