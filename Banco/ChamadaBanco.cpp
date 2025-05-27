@@ -1,12 +1,13 @@
 #include <iostream>
 #include <stdio.h>
 #include <list>
+#include <vector>
+
 #include "sqlite3.h"
 
 using namespace std;
 
 static int getMaxID(string tabela, string coluna);
-static int callback(void *data, int argc, char **argv, char **azColName);
 
 static void createTables()
 {
@@ -210,25 +211,6 @@ static void deleteAllTables()
     deleteTable("Instancias");
 }
 
-static /*list<string>*/ void selectFlashcard(int id)
-{
-    sqlite3 *db;
-    char *erro;
-
-    int banco = sqlite3_open("banco.db", &db);
-    string selectSQL = "SELECT * FROM Flashcards WHERE ID_Flashcard = "+ to_string(id) + " ;";
-    banco = sqlite3_exec(db, selectSQL.c_str(), callback, 0, &erro);
-    if (banco != SQLITE_OK)
-    {
-        cerr << "Erro ao Selecionar Flashcard: " << erro << endl;
-        sqlite3_free(erro);
-    }
-    else
-    {
-        cout << "Flashcard selecionado com sucesso!" << endl;
-    }
-}
-
 static int selectIntTabela ( int id, string tabela, string coluna)
 {
     sqlite3 *db;
@@ -311,6 +293,41 @@ static bool selectAcertou (int id)
     return acertou;
 }
 
+static list<int> selectFlashcardsByMateria(int id_materia)
+{
+    sqlite3 *db;
+    char *erro;
+    list<int> flashcards;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT ID_Flashcard FROM Flashcards WHERE ID_Materia = " + to_string(id_materia) + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        if (argc > 0 && argv[0] != nullptr)
+        {
+            list<int> *flashcards = static_cast<list<int> *>(data);
+            flashcards->push_back(atoi(argv[0]));
+        }
+        return 0;
+    }, &flashcards, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar flashcards por materia: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    return flashcards;
+}
+
+static void printPerguntaPorMateria(int id_materia)
+{
+    list<int> idFlashcards;
+    idFlashcards = selectFlashcardsByMateria(id_materia);
+    for (int id : idFlashcards)
+    {
+        string pergunta = selectPergunta(id);
+        cout << "Pergunta ID " << id << ": " << pergunta << endl;
+    }
+}
+
 static int getMaxID(string tabela, string coluna)
 {
     sqlite3 *db;
@@ -330,14 +347,13 @@ static int getMaxID(string tabela, string coluna)
     return maxID;
 }
 
-static int callback(void *data, int argc, char **argv, char **azColName)
+static void printIDList(list<int> idList)
 {
-    for (int i = 0; i < argc; i++)
-    {
-        cout << azColName[i] << " = " << argv[i] << endl;
+    cout << "Flashcards de Geografia: ";
+    for (int id : idList) {
+        cout << id << " ";
     }
     cout << endl;
-    return 0;
 }
 
 int main()
@@ -345,6 +361,7 @@ int main()
     deleteAllTables();
     createTables();
     insertFlashcard("Qual é a capital da França?", "Paris", 1, 2);
+    insertFlashcard("Qual é a capital do Brasil?", "Brasília", 1, 1);
     insertFlashcard("abc", "Paris", 3, 4);
     insertMateria("Geografia");
     insertRun(80, 120);
@@ -352,9 +369,9 @@ int main()
     printTable("Materias");
     printTable("Runs");
     printTable("Instancias");
-    selectFlashcard(2);
-    selectFlashcard(1);
     printf("Dificuldade: %d\n", selectDificuldade(1));
+    printIDList(selectFlashcardsByMateria(1));
+    printPerguntaPorMateria(1);
     clearAllTables();
 
     return 0;
