@@ -229,6 +229,83 @@ static /*list<string>*/ void selectFlashcard(int id)
     }
 }
 
+static int selectIntTabela ( int id, string tabela, string coluna)
+{
+    sqlite3 *db;
+    char *erro;
+    int valor = 0;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT " + coluna + " FROM " + tabela + " WHERE ID_Flashcard = " + to_string(id) + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        if (argc > 0 && argv[0] != nullptr)
+        {
+            int *valor = static_cast<int *>(data);
+            *valor = atoi(argv[0]);
+        }
+        return 0;
+    }, &valor, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar dado: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    return valor;
+}
+
+static string selectStringTabela(int id, string tabela, string coluna)
+{
+    sqlite3 *db;
+    char *erro;
+    string valor;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT " + coluna + " FROM " + tabela + " WHERE ID_Flashcard = " + to_string(id) + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        if (argc > 0 && argv[0] != nullptr)
+        {
+            string *valor = static_cast<string *>(data);
+            *valor = argv[0];
+        }
+        return 0;
+    }, &valor, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar dado: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    return valor;
+}
+
+static int selectDificuldade (int id)
+{
+    return selectIntTabela(id, "Flashcards", "Dificuldade");
+}
+
+static boolean selectAcertou (int id)
+{
+    sqlite3 *db;
+    char *erro;
+    boolean acertou = false;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT Acertou FROM Instancias WHERE ID_Instancia = " + to_string(id) + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        if (argc > 0 && argv[0] != nullptr)
+        {
+            boolean *acertou = static_cast<boolean *>(data);
+            *acertou = (atoi(argv[0]) != 0);
+        }
+        return 0;
+    }, &acertou, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar dado: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    return acertou;
+}
+
 static int getMaxID(string tabela, string coluna)
 {
     sqlite3 *db;
