@@ -287,18 +287,18 @@ static string selectPergunta (int id)
     return selectStringTabela(id, "Flashcards", "Pergunta");
 }
 
-static boolean selectAcertou (int id)
+static bool selectAcertou (int id)
 {
     sqlite3 *db;
     char *erro;
-    boolean acertou = false;
+    bool acertou = false;
 
     int banco = sqlite3_open("banco.db", &db);
     string selectSQL = "SELECT Acertou FROM Instancias WHERE ID_Instancia = " + to_string(id) + ";";
     banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
         if (argc > 0 && argv[0] != nullptr)
         {
-            boolean *acertou = static_cast<boolean *>(data);
+            bool *acertou = static_cast<bool *>(data);
             *acertou = (atoi(argv[0]) != 0);
         }
         return 0;
@@ -354,6 +354,7 @@ int main()
     printTable("Instancias");
     selectFlashcard(2);
     selectFlashcard(1);
+    printf("Dificuldade: %d\n", selectDificuldade(1));
     clearAllTables();
 
     return 0;
