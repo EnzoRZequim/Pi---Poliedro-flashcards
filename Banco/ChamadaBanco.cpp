@@ -259,16 +259,6 @@ static string selectStringTabela(int id, string tabela, string coluna)
     return valor;
 }
 
-static int selectDificuldade (int id)
-{
-    return selectIntTabela(id, "Flashcards", "Dificuldade");
-}
-
-static string selectPergunta (int id)
-{
-    return selectStringTabela(id, "Flashcards", "Pergunta");
-}
-
 static bool selectAcertou (int id)
 {
     sqlite3 *db;
@@ -293,6 +283,16 @@ static bool selectAcertou (int id)
     return acertou;
 }
 
+static int selectDificuldade (int id)
+{
+    return selectIntTabela(id, "Flashcards", "Dificuldade");
+}
+
+static string selectPergunta (int id)
+{
+    return selectStringTabela(id, "Flashcards", "Pergunta");
+}
+
 static list<int> selectFlashcardsByMateria(int id_materia)
 {
     sqlite3 *db;
@@ -315,17 +315,6 @@ static list<int> selectFlashcardsByMateria(int id_materia)
         sqlite3_free(erro);
     }
     return flashcards;
-}
-
-static void printPerguntaPorMateria(int id_materia)
-{
-    list<int> idFlashcards;
-    idFlashcards = selectFlashcardsByMateria(id_materia);
-    for (int id : idFlashcards)
-    {
-        string pergunta = selectPergunta(id);
-        cout << "Pergunta ID " << id << ": " << pergunta << endl;
-    }
 }
 
 static int getMaxID(string tabela, string coluna)
@@ -354,6 +343,17 @@ static void printIDList(list<int> idList)
         cout << id << " ";
     }
     cout << endl;
+}
+
+static void printPerguntaPorMateria(int id_materia)
+{
+    list<int> idFlashcards;
+    idFlashcards = selectFlashcardsByMateria(id_materia);
+    for (int id : idFlashcards)
+    {
+        string pergunta = selectPergunta(id);
+        cout << "Pergunta ID " << id << ": " << pergunta << endl;
+    }
 }
 
 int main()
