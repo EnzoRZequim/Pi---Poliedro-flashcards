@@ -30,3 +30,5 @@ int main()
   return 0;  
 }  
 
+testamos sem subir a aplicação que estava no ciclo red, pois refatoramos em seguida(primeiro instanciamos o metodo de selecionar flashcards por materia usando um vector, e substituimos o método por um list para mostrar os flashcards relacionado à matéria)
+
