@@ -30,5 +30,41 @@ int main()
   return 0;  
 }  
 
+# Os resultados foram :  
+Tabela deletada com sucesso!  
+Tabela deletada com sucesso!  
+Tabela deletada com sucesso!  
+Tabela deletada com sucesso!  
+Tabelas criadas com sucesso!  
+Flashcard inserido com sucesso!  
+Flashcard inserido com sucesso!  
+Flashcard inserido com sucesso!  
+Materia inserida com sucesso!  
+Run inserido com sucesso!  
+Instancia inserida com sucesso!  
+ID_Materia = 1  
+Nome_Materia = Geografia  
+  
+ID_Run = 1  
+Taxa_acerto = 80  
+Tempo_total = 120  
+
+ID_Instancia = 1  
+ID_Run = 1  
+ID_Flashcard = 1  
+Tempo_resposta = 30  
+Acertou = 1  
+
+Dificuldade: 2  
+Flashcards de Geografia: 1 2  
+Pergunta ID 1: Qual é a capital da França?  
+Pergunta ID 2: Qual é a capital do Brasil?  
+Tabela limpa com sucesso!  
+Tabela limpa com sucesso!  
+Tabela limpa com sucesso!  
+Tabela limpa com sucesso!  
+  
+Process finished with exit code 0  
+
 testamos sem subir a aplicação que estava no ciclo red, pois refatoramos em seguida(primeiro instanciamos o metodo de selecionar flashcards por materia usando um vector, e substituimos o método por um list para mostrar os flashcards relacionado à matéria)
 
