@@ -313,7 +313,7 @@ static list<int> selectFlashcardsByMateria(int id_materia)
     return flashcards;
 }
 
-static int escolherFlashcard(const list<int> &idList, int id_materia, int dificuldade)
+static int escolherFlashcard(const list<int> &idList)
 {
     if (idList.empty())
     {
@@ -335,18 +335,18 @@ static int escolherFlashcard(const list<int> &idList, int id_materia, int dificu
     }
     inClause += ")";
 
-    // filtra por matéria e dificuldade
-    string selectSQL = "SELECT ID_Flashcard FROM Flashcards WHERE ID_Flashcard IN " + inClause + " AND ID_Materia = " + to_string(id_materia) + 
-    " AND Dificuldade = " + to_string(dificuldade) + ";";
+    // consulta os ids fornecidos
+    string selectSQL = "SELECT ID_Flashcard FROM Flashcards WHERE ID_Flashcard IN " + inClause + ";";
 
-    // conexao do banco
+    // conexão com banco
     int banco = sqlite3_open("banco.db", &db);
-    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName){
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
         if (argc > 0 && argv[0] != nullptr) {
-            vector<int> *lista = static_cast<vector<int>*>(data);
+            vector<int> *lista = static_cast<vector<int> *>(data);
             lista->push_back(atoi(argv[0]));
         }
-        return 0; }, &idsFiltrados, &erro);
+        return 0;
+    }, &idsFiltrados, &erro);
 
     if (banco != SQLITE_OK)
     {
@@ -359,11 +359,11 @@ static int escolherFlashcard(const list<int> &idList, int id_materia, int dificu
 
     if (idsFiltrados.empty())
     {
-        cerr << "Nenhum flashcard encontrado com os filtros especificados." << endl;
+        cerr << "Nenhum flashcard encontrado com os IDs fornecidos." << endl;
         return -1;
     }
 
-    // sorteia um ID aleatorio
+    // sorteia um ID aleatório
     srand(static_cast<unsigned int>(time(nullptr)));
     int escolhido = idsFiltrados[rand() % idsFiltrados.size()];
     return escolhido;
