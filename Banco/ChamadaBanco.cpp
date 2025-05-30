@@ -1,7 +1,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <list>
-#include <vector>
 
 #include "sqlite3.h"
 
@@ -50,6 +49,8 @@ static void createTables()
         cout << "Tabelas criadas com sucesso!" << endl;
     }
 }
+
+// Funções de inserção
 
 static void insertFlashcard(string pergunta, string resposta, int id_materia, int dificuldade)
 {
@@ -135,27 +136,7 @@ static void insertInstancia(int id_run, int id_flashcard, int tempo_resposta, bo
     }
 }
 
-static void printTable(string tabela)
-{
-    sqlite3 *db;
-    char *erro;
-
-    int banco = sqlite3_open("banco.db", &db);
-    string selectSQL = "SELECT * FROM " + tabela + ";";
-    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
-        for (int i = 0; i < argc; i++)
-        {
-            cout << azColName[i] << " = " << argv[i] << endl;
-        }
-        cout << endl;
-        return 0;
-    }, NULL, &erro);
-    if (banco != SQLITE_OK)
-    {
-        cerr << "Erro ao selecionar dados: " << erro << endl;
-        sqlite3_free(erro);
-    }
-}
+// Funções de limpeza e deleção
 
 static void clearTable(string tabela)
 {
@@ -210,6 +191,8 @@ static void deleteAllTables()
     deleteTable("Runs");
     deleteTable("Instancias");
 }
+
+// Funções de seleção
 
 static int selectIntTabela ( int id, string tabela, string coluna)
 {
@@ -283,14 +266,69 @@ static bool selectAcertou (int id)
     return acertou;
 }
 
+static string selectPergunta (int id)
+{
+    return selectStringTabela(id, "Flashcards", "Pergunta");
+}
+
+static string selectResposta (int id)
+{
+    return selectStringTabela(id, "Flashcards", "Resposta");
+}
+
+static int selectIDMateriaFromFlashcards (int id)
+{
+    return selectIntTabela(id, "Flashcards", "ID_Materia");
+}
+
 static int selectDificuldade (int id)
 {
     return selectIntTabela(id, "Flashcards", "Dificuldade");
 }
 
-static string selectPergunta (int id)
+static int selectAcertos (int id)
 {
-    return selectStringTabela(id, "Flashcards", "Pergunta");
+    return selectIntTabela(id, "Flashcards", "Acertos");
+}
+
+static int selectErros (int id)
+{
+    return selectIntTabela(id, "Flashcards", "Erros");
+}
+
+static int selectMelhorTempoResposta (int id)
+{
+    return selectIntTabela(id, "Flashcards", "Melhor_tempo_resposta");
+}
+
+static string selectNomeMateria (int id)
+{
+    return selectStringTabela(id, "Materias", "Nome_Materia");
+}
+
+static int selectIDRunFromInstancias (int id)
+{
+    return selectIntTabela(id, "Instancias", "ID_Run");
+}
+
+static int selectIDFlashcardFromInstancias (int id)
+{
+    return selectIntTabela(id, "Instancias", "ID_Flashcard");
+}
+
+static int selectTempoResposta (int id)
+{
+    return selectIntTabela(id, "Instancias", "Tempo_resposta");
+}
+
+static int selectTaxaAcerto (int id)
+{
+    return selectIntTabela(id, "Runs", "Taxa_acerto");
+}
+
+static int selectTaxaErro (int id)
+{
+    return selectIntTabela(id, "Runs", "Taxa_erro");
 }
 
 static list<int> selectFlashcardsByMateria(int id_materia)
@@ -317,6 +355,116 @@ static list<int> selectFlashcardsByMateria(int id_materia)
     return flashcards;
 }
 
+static list<int> selectFlashcardsByDificuldade(int dificuldade)
+{
+    sqlite3 *db;
+    char *erro;
+    list<int> flashcards;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT ID_Flashcard FROM Flashcards WHERE Dificuldade = " + to_string(dificuldade) + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        if (argc > 0 && argv[0] != nullptr)
+        {
+            list<int> *flashcards = static_cast<list<int> *>(data);
+            flashcards->push_back(atoi(argv[0]));
+        }
+        return 0;
+    }, &flashcards, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar flashcards por dificuldade: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    return flashcards;
+}
+
+static list<int> selectFlashcardsByDificuldadeAndMateria(int dificuldade, int id_materia)
+{
+    sqlite3 *db;
+    char *erro;
+    list<int> flashcards;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT ID_Flashcard FROM Flashcards WHERE Dificuldade = " + to_string(dificuldade) + " AND ID_Materia = " + to_string(id_materia) + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        if (argc > 0 && argv[0] != nullptr)
+        {
+            list<int> *flashcards = static_cast<list<int> *>(data);
+            flashcards->push_back(atoi(argv[0]));
+        }
+        return 0;
+    }, &flashcards, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar flashcards por dificuldade e materia: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    return flashcards;
+}
+
+static list<int> selectInstaciasByRun(int id_run)
+{
+    sqlite3 *db;
+    char *erro;
+    list<int> instancias;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT ID_Instancia FROM Instancias WHERE ID_Run = " + to_string(id_run) + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        if (argc > 0 && argv[0] != nullptr)
+        {
+            list<int> *instancias = static_cast<list<int> *>(data);
+            instancias->push_back(atoi(argv[0]));
+        }
+        return 0;
+    }, &instancias, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar instancias por run: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    return instancias;
+}
+
+// Funções de atualização
+
+static void updateAcertos(int id_flashcard)
+{
+    sqlite3 *db;
+    char *erro;
+    int banco = sqlite3_open("banco.db", &db);
+    string updateSQL = "UPDATE Flashcards SET Acertos = Acertos + 1 WHERE ID_Flashcard = " + to_string(id_flashcard) + ";";
+    banco = sqlite3_exec(db, updateSQL.c_str(), NULL, 0, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao atualizar Acertos: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    else
+    {
+        cout << "Acertos atualizado com sucesso para o flashcard com ID " << id_flashcard << "!" << endl;
+    }
+}
+
+static void updateErros(int id_flashcard)
+{
+    sqlite3 *db;
+    char *erro;
+    int banco = sqlite3_open("banco.db", &db);
+    string updateSQL = "UPDATE Flashcards SET Erros = Erros + 1 WHERE ID_Flashcard = " + to_string(id_flashcard) + ";";
+    banco = sqlite3_exec(db, updateSQL.c_str(), NULL, 0, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao atualizar Erros: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    else
+    {
+        cout << "Erros atualizado com sucesso para o flashcard com ID " << id_flashcard << "!" << endl;
+    }
+}
+
 static int getMaxID(string tabela, string coluna)
 {
     sqlite3 *db;
@@ -336,6 +484,8 @@ static int getMaxID(string tabela, string coluna)
     return maxID;
 }
 
+//Funções de teste
+
 static void printIDList(list<int> idList)
 {
     cout << "Flashcards de Geografia: ";
@@ -353,6 +503,28 @@ static void printPerguntaPorMateria(int id_materia)
     {
         string pergunta = selectPergunta(id);
         cout << "Pergunta ID " << id << ": " << pergunta << endl;
+    }
+}
+
+static void printTable(string tabela)
+{
+    sqlite3 *db;
+    char *erro;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT * FROM " + tabela + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        for (int i = 0; i < argc; i++)
+        {
+            cout << azColName[i] << " = " << argv[i] << endl;
+        }
+        cout << endl;
+        return 0;
+    }, NULL, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar dados: " << erro << endl;
+        sqlite3_free(erro);
     }
 }
 
