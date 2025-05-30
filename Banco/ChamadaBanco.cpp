@@ -504,6 +504,16 @@ static void updateErros(int id_flashcard)
     }
 }
 
+static int escolherFlashcard(const list<int> &idList)
+{
+    srand(static_cast<unsigned int>(time(nullptr)));
+    int numeroAleatorio = rand() % idList.size();
+    auto it = idList.begin();
+    advance(it, numeroAleatorio);
+    int escolhido = *it;
+    return escolhido;
+}
+
 static int getMaxID(string tabela, string coluna)
 {
     sqlite3 *db;
