@@ -194,6 +194,30 @@ static void deleteAllTables()
 
 // Funções de seleção
 
+static list<int> selectAllIntsTabela(string tabela, string coluna)
+{
+    sqlite3 *db;
+    char *erro;
+    list<int> valores;
+
+    int banco = sqlite3_open("banco.db", &db);
+    string selectSQL = "SELECT " + coluna + " FROM " + tabela + ";";
+    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
+        if (argc > 0 && argv[0] != nullptr)
+        {
+            list<int> *valores = static_cast<list<int> *>(data);
+            valores->push_back(atoi(argv[0]));
+        }
+        return 0;
+    }, &valores, &erro);
+    if (banco != SQLITE_OK)
+    {
+        cerr << "Erro ao selecionar dados: " << erro << endl;
+        sqlite3_free(erro);
+    }
+    return valores;
+}
+
 static int selectIntTabela ( int id, string tabela, string coluna)
 {
     sqlite3 *db;
@@ -329,6 +353,21 @@ static int selectTaxaAcerto (int id)
 static int selectTaxaErro (int id)
 {
     return selectIntTabela(id, "Runs", "Taxa_erro");
+}
+
+static list<int> selectAllFlashcards()
+{
+    return selectAllIntsTabela("Flashcards", "ID_Flashcard");
+}
+
+static list<int> selectAllMaterias()
+{
+    return selectAllIntsTabela("Materias", "ID_Materia");
+}
+
+static list<int> selectAllRuns()
+{
+    return selectAllIntsTabela("Runs", "ID_Run");
 }
 
 static list<int> selectFlashcardsByMateria(int id_materia)
