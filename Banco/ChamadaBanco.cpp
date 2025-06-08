@@ -466,6 +466,16 @@ static list<int> selectInstaciasByRun(int id_run)
     return instancias;
 }
 
+static int escolherFlashcard(const list<int> &idList)
+{
+    srand(static_cast<unsigned int>(time(nullptr)));
+    int numeroAleatorio = rand() % idList.size();
+    auto it = idList.begin();
+    advance(it, numeroAleatorio);
+    int escolhido = *it;
+    return escolhido;
+}
+
 // Funções de atualização
 
 static void updateAcertos(int id_flashcard)
@@ -502,16 +512,6 @@ static void updateErros(int id_flashcard)
     {
         cout << "Erros atualizado com sucesso para o flashcard com ID " << id_flashcard << "!" << endl;
     }
-}
-
-static int escolherFlashcard(const list<int> &idList)
-{
-    srand(static_cast<unsigned int>(time(nullptr)));
-    int numeroAleatorio = rand() % idList.size();
-    auto it = idList.begin();
-    advance(it, numeroAleatorio);
-    int escolhido = *it;
-    return escolhido;
 }
 
 static int getMaxID(string tabela, string coluna)
@@ -575,25 +575,4 @@ static void printTable(string tabela)
         cerr << "Erro ao selecionar dados: " << erro << endl;
         sqlite3_free(erro);
     }
-}
-
-int main()
-{
-    deleteAllTables();
-    createTables();
-    insertFlashcard("Qual é a capital da França?", "Paris", 1, 2);
-    insertFlashcard("Qual é a capital do Brasil?", "Brasília", 1, 1);
-    insertFlashcard("abc", "Paris", 3, 4);
-    insertMateria("Geografia");
-    insertRun(80, 120);
-    insertInstancia(1, 1, 30, true);
-    printTable("Materias");
-    printTable("Runs");
-    printTable("Instancias");
-    printf("Dificuldade: %d\n", selectDificuldade(1));
-    printIDList(selectFlashcardsByMateria(1));
-    printPerguntaPorMateria(1);
-    clearAllTables();
-
-    return 0;
 }
