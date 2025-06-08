@@ -9,18 +9,18 @@ qt6_add_qml_module(FlashCardContent
     VERSION 1.0
     RESOURCE_PREFIX "/qt/qml"
     QML_FILES
-        "TelaCriaEditaGeral.qml"
-        "App.qml"
-        "TelaHistoricoGeral.qml"
-        "TelaInicio.qml"
-        "TelaPopUpSair.qml"
         "TelaCriaEditaFlashcard.qml"
-        "TelaPergunta.qml"
+        "TelaPopUpSair.qml"
+        "TelaInicio.qml"
+        "TelaCriaEditaGeral.qml"
+        "TelaHistoricoGeral.qml"
         "TelaResposta.qml"
+        "App.qml"
+        "TelaPergunta.qml"
     RESOURCES
         "animatedsprite-loading.png"
-        "images/Logo_Poliedro_Horiz_EDUCACAO.webp"
         "images/home 2.png"
+        "images/Logo_Poliedro_Horiz_EDUCACAO.webp"
 )
 
 

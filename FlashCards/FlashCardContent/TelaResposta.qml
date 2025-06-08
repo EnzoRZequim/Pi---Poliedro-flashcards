@@ -28,7 +28,6 @@ Item {
         width: 1920
         height: 1088
         color: "#ffffff"
-
         Button {
             id: btHome
             x: 29
@@ -36,8 +35,48 @@ Item {
             width: 133
             height: 114
             text: qsTr("")
+            onClicked: { navigateTo("TelaInicio") }
+        }
 
-            onClicked: navigateTo("TelaInicio")
+        Rectangle {
+            id: rectangle2
+            x: 1443
+            y: 55
+            width: 256
+            height: 88
+            color: "#d1d1d1"
+            Text {
+                id: timer
+                x: 0
+                y: 4
+                width: 256
+                height: 80
+                text: qsTr("00:00")
+                font.pixelSize: 64
+                horizontalAlignment: Text.AlignHCenter
+                font.weight: Font.Bold
+            }
+        }
+
+        Rectangle {
+            id: rectangle3
+            x: 1102
+            y: 55
+            width: 256
+            height: 88
+            color: "#d1d1d1"
+        }
+
+        Text {
+            id: quantidade
+            x: 1102
+            y: 59
+            width: 256
+            height: 80
+            text: qsTr("0 / 1")
+            font.pixelSize: 64
+            horizontalAlignment: Text.AlignHCenter
+            font.weight: Font.Bold
         }
     }
 
@@ -47,5 +86,50 @@ Item {
         y: 43
         source: "../images/home 2.png"
         fillMode: Image.PreserveAspectFit
+    }
+
+    Rectangle {
+        id: rectangle1
+        x: 221
+        y: 238
+        width: 1478
+        height: 665
+        color: "#d1d1d1"
+        Text {
+            id: textoResposta
+            x: 8
+            y: 8
+            width: 1462
+            height: 649
+            text: qsTr("Text")
+            font.pixelSize: 64
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.styleName: "Semibold"
+        }
+    }
+
+    Button {
+        id: btAcertei
+        x: 221
+        y: 947
+        width: 490
+        height: 100
+        text: qsTr("Acertei")
+        font.pointSize: 36
+        font.family: "Arial"
+        font.bold: true
+    }
+
+    Button {
+        id: btErrei
+        x: 1209
+        y: 947
+        width: 490
+        height: 100
+        text: qsTr("Errei")
+        font.pointSize: 36
+        font.family: "Arial"
+        font.bold: true
     }
 }
