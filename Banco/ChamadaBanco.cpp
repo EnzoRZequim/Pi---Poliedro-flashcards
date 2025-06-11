@@ -1,3 +1,4 @@
+#include "ChamadaBanco.h"
 #include <iostream>
 #include <stdio.h>
 #include <list>
@@ -8,7 +9,7 @@ using namespace std;
 
 static int getMaxID(string tabela, string coluna);
 
-static void createTables()
+void createTables()
 {
     sqlite3 *db;
     char *erro;
@@ -52,7 +53,7 @@ static void createTables()
 
 // Funções de inserção
 
-static void insertFlashcard(string pergunta, string resposta, int id_materia, int dificuldade)
+void insertFlashcard(string pergunta, string resposta, int id_materia, int dificuldade)
 {
     sqlite3 *db;
     char *erro;
@@ -73,7 +74,7 @@ static void insertFlashcard(string pergunta, string resposta, int id_materia, in
     }
 }
 
-static void insertMateria(string nome_materia)
+void insertMateria(string nome_materia)
 {
     sqlite3 *db;
     char *erro;
@@ -94,7 +95,7 @@ static void insertMateria(string nome_materia)
     }
 }
 
-static void insertRun(int taxa_acerto, int tempo_total)
+void insertRun(int taxa_acerto, int tempo_total)
 {
     sqlite3 *db;
     char *erro;
@@ -115,7 +116,7 @@ static void insertRun(int taxa_acerto, int tempo_total)
     }
 }
 
-static void insertInstancia(int id_run, int id_flashcard, int tempo_resposta, bool acertou)
+void insertInstancia(int id_run, int id_flashcard, int tempo_resposta, bool acertou)
 {
     sqlite3 *db;
     char *erro;
@@ -138,7 +139,7 @@ static void insertInstancia(int id_run, int id_flashcard, int tempo_resposta, bo
 
 // Funções de limpeza e deleção
 
-static void clearTable(string tabela)
+void clearTable(string tabela)
 {
     sqlite3 *db;
     char *erro;
@@ -157,7 +158,7 @@ static void clearTable(string tabela)
     }
 }
 
-static void clearAllTables()
+void clearAllTables()
 {
     clearTable("Flashcards");
     clearTable("Materias");
@@ -165,7 +166,7 @@ static void clearAllTables()
     clearTable("Instancias");
 }
 
-static void deleteTable(string tabela)
+void deleteTable(string tabela)
 {
     sqlite3 *db;
     char *erro;
@@ -184,7 +185,7 @@ static void deleteTable(string tabela)
     }
 }
 
-static void deleteAllTables()
+void deleteAllTables()
 {
     deleteTable("Flashcards");
     deleteTable("Materias");
@@ -194,7 +195,7 @@ static void deleteAllTables()
 
 // Funções de seleção
 
-static list<int> selectAllIntsTabela(string tabela, string coluna)
+list<int> selectAllIntsTabela(string tabela, string coluna)
 {
     sqlite3 *db;
     char *erro;
@@ -218,7 +219,7 @@ static list<int> selectAllIntsTabela(string tabela, string coluna)
     return valores;
 }
 
-static int selectIntTabela ( int id, string tabela, string coluna)
+int selectIntTabela ( int id, string tabela, string coluna)
 {
     sqlite3 *db;
     char *erro;
@@ -242,7 +243,7 @@ static int selectIntTabela ( int id, string tabela, string coluna)
     return valor;
 }
 
-static string selectStringTabela(int id, string tabela, string coluna)
+string selectStringTabela(int id, string tabela, string coluna)
 {
     sqlite3 *db;
     char *erro;
@@ -266,7 +267,7 @@ static string selectStringTabela(int id, string tabela, string coluna)
     return valor;
 }
 
-static bool selectAcertou (int id)
+bool selectAcertou (int id)
 {
     sqlite3 *db;
     char *erro;
@@ -290,87 +291,87 @@ static bool selectAcertou (int id)
     return acertou;
 }
 
-static string selectPergunta (int id)
+string selectPergunta (int id)
 {
     return selectStringTabela(id, "Flashcards", "Pergunta");
 }
 
-static string selectResposta (int id)
+string selectResposta (int id)
 {
     return selectStringTabela(id, "Flashcards", "Resposta");
 }
 
-static int selectIDMateriaFromFlashcards (int id)
+int selectIDMateriaFromFlashcards (int id)
 {
     return selectIntTabela(id, "Flashcards", "ID_Materia");
 }
 
-static int selectDificuldade (int id)
+int selectDificuldade (int id)
 {
     return selectIntTabela(id, "Flashcards", "Dificuldade");
 }
 
-static int selectAcertos (int id)
+int selectAcertos (int id)
 {
     return selectIntTabela(id, "Flashcards", "Acertos");
 }
 
-static int selectErros (int id)
+int selectErros (int id)
 {
     return selectIntTabela(id, "Flashcards", "Erros");
 }
 
-static int selectMelhorTempoResposta (int id)
+int selectMelhorTempoResposta (int id)
 {
     return selectIntTabela(id, "Flashcards", "Melhor_tempo_resposta");
 }
 
-static string selectNomeMateria (int id)
+string selectNomeMateria (int id)
 {
     return selectStringTabela(id, "Materias", "Nome_Materia");
 }
 
-static int selectIDRunFromInstancias (int id)
+int selectIDRunFromInstancias (int id)
 {
     return selectIntTabela(id, "Instancias", "ID_Run");
 }
 
-static int selectIDFlashcardFromInstancias (int id)
+int selectIDFlashcardFromInstancias (int id)
 {
     return selectIntTabela(id, "Instancias", "ID_Flashcard");
 }
 
-static int selectTempoResposta (int id)
+int selectTempoResposta (int id)
 {
     return selectIntTabela(id, "Instancias", "Tempo_resposta");
 }
 
-static int selectTaxaAcerto (int id)
+int selectTaxaAcerto (int id)
 {
     return selectIntTabela(id, "Runs", "Taxa_acerto");
 }
 
-static int selectTaxaErro (int id)
+int selectTaxaErro (int id)
 {
     return selectIntTabela(id, "Runs", "Taxa_erro");
 }
 
-static list<int> selectAllFlashcards()
+list<int> selectAllFlashcards()
 {
     return selectAllIntsTabela("Flashcards", "ID_Flashcard");
 }
 
-static list<int> selectAllMaterias()
+list<int> selectAllMaterias()
 {
     return selectAllIntsTabela("Materias", "ID_Materia");
 }
 
-static list<int> selectAllRuns()
+list<int> selectAllRuns()
 {
     return selectAllIntsTabela("Runs", "ID_Run");
 }
 
-static list<int> selectFlashcardsByMateria(int id_materia)
+list<int> selectFlashcardsByMateria(int id_materia)
 {
     sqlite3 *db;
     char *erro;
@@ -394,7 +395,7 @@ static list<int> selectFlashcardsByMateria(int id_materia)
     return flashcards;
 }
 
-static list<int> selectFlashcardsByDificuldade(int dificuldade)
+list<int> selectFlashcardsByDificuldade(int dificuldade)
 {
     sqlite3 *db;
     char *erro;
@@ -418,7 +419,7 @@ static list<int> selectFlashcardsByDificuldade(int dificuldade)
     return flashcards;
 }
 
-static list<int> selectFlashcardsByDificuldadeAndMateria(int dificuldade, int id_materia)
+list<int> selectFlashcardsByDificuldadeAndMateria(int dificuldade, int id_materia)
 {
     sqlite3 *db;
     char *erro;
@@ -442,7 +443,7 @@ static list<int> selectFlashcardsByDificuldadeAndMateria(int dificuldade, int id
     return flashcards;
 }
 
-static list<int> selectInstaciasByRun(int id_run)
+list<int> selectInstaciasByRun(int id_run)
 {
     sqlite3 *db;
     char *erro;
@@ -466,7 +467,7 @@ static list<int> selectInstaciasByRun(int id_run)
     return instancias;
 }
 
-static int escolherFlashcard(const list<int> &idList)
+int escolherFlashcard(const list<int> &idList)
 {
     srand(static_cast<unsigned int>(time(nullptr)));
     int numeroAleatorio = rand() % idList.size();
@@ -478,7 +479,7 @@ static int escolherFlashcard(const list<int> &idList)
 
 // Funções de atualização
 
-static void updateAcertos(int id_flashcard)
+void updateAcertos(int id_flashcard)
 {
     sqlite3 *db;
     char *erro;
@@ -496,7 +497,7 @@ static void updateAcertos(int id_flashcard)
     }
 }
 
-static void updateErros(int id_flashcard)
+void updateErros(int id_flashcard)
 {
     sqlite3 *db;
     char *erro;
@@ -531,48 +532,4 @@ static int getMaxID(string tabela, string coluna)
         return 0;
     }, &maxID, &erro);
     return maxID;
-}
-
-//Funções de teste
-
-static void printIDList(list<int> idList)
-{
-    cout << "Flashcards de Geografia: ";
-    for (int id : idList) {
-        cout << id << " ";
-    }
-    cout << endl;
-}
-
-static void printPerguntaPorMateria(int id_materia)
-{
-    list<int> idFlashcards;
-    idFlashcards = selectFlashcardsByMateria(id_materia);
-    for (int id : idFlashcards)
-    {
-        string pergunta = selectPergunta(id);
-        cout << "Pergunta ID " << id << ": " << pergunta << endl;
-    }
-}
-
-static void printTable(string tabela)
-{
-    sqlite3 *db;
-    char *erro;
-
-    int banco = sqlite3_open("banco.db", &db);
-    string selectSQL = "SELECT * FROM " + tabela + ";";
-    banco = sqlite3_exec(db, selectSQL.c_str(), [](void *data, int argc, char **argv, char **azColName) {
-        for (int i = 0; i < argc; i++)
-        {
-            cout << azColName[i] << " = " << argv[i] << endl;
-        }
-        cout << endl;
-        return 0;
-    }, NULL, &erro);
-    if (banco != SQLITE_OK)
-    {
-        cerr << "Erro ao selecionar dados: " << erro << endl;
-        sqlite3_free(erro);
-    }
 }
