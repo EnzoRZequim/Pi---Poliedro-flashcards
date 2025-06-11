@@ -1,16 +1,19 @@
-// Copyright (C) 2024 The Qt Company Ltd.
-// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only
-
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QtQml/qqmlextensionplugin.h> // Required for Q_IMPORT_QML_PLUGIN
 #include "PonteBackFront.h"
 
-#include "autogen/environment.h"
+// --- THE FIX ---
+// Explicitly import the static plugins to satisfy the linker.
+// This macro takes only the plugin's C++ class name as an argument.
+Q_IMPORT_QML_PLUGIN(FlashCardPlugin)
+Q_IMPORT_QML_PLUGIN(FlashCardContentPlugin)
 
 int main(int argc, char *argv[])
 {
-    set_qt_environment();
+    using namespace Qt::StringLiterals; // Required for the _s literal
+
     QApplication app(argc, argv);
 
     PonteBackFront ponte;
@@ -19,16 +22,16 @@ int main(int argc, char *argv[])
 
     engine.rootContext()->setContextProperty("ponte", &ponte);
 
-    const QUrl url(mainQmlFile);
-    QObject::connect(
-                &engine, &QQmlApplicationEngine::objectCreated, &app,
-                [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
+    // Using the modern _s literal to address the deprecation warning.
+    const QUrl url(u"qrc:/FlashCardContent/App.qml"_s);
 
-    engine.addImportPath(QCoreApplication::applicationDirPath() + "/qml");
-    engine.addImportPath(":/");
+    QObject::connect(
+        &engine, &QQmlApplicationEngine::objectCreated, &app,
+        [url](QObject *obj, const QUrl &objUrl) {
+            if (!obj && url == objUrl)
+                QCoreApplication::exit(-1);
+        }, Qt::QueuedConnection);
+
     engine.load(url);
 
     if (engine.rootObjects().isEmpty())
