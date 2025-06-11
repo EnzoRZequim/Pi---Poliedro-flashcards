@@ -14,6 +14,18 @@ Item {
     width: 1920
     height: 1080
 
+    property int flashcardId: -1
+
+    // Propriedade para guardar o texto da pergunta
+    property string perguntaTexto: ""
+
+    Component.onCompleted: {
+        // Ao carregar, busca a pergunta usando o ID recebido
+        if (flashcardId !== -1) {
+            perguntaTexto = ponte.selectPergunta(flashcardId);
+        }
+    }
+
     // Função para navegar para outra tela
     function navigateTo(page) {
         if (stackView) {  // Verifica se o StackView está disponível
@@ -96,12 +108,12 @@ Item {
         height: 665
         color: "#d1d1d1"
         Text {
-            id: textoResposta
+            id: textoPergunta
             x: 8
             y: 8
             width: 1462
             height: 649
-            text: qsTr("Text")
+            text: perguntaTexto
             font.pixelSize: 64
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -119,5 +131,8 @@ Item {
         font.pointSize: 36
         font.family: "Arial"
         font.bold: true
+        onClicked: {
+            stackView.push("TelaResposta.qml", { "flashcardId": flashcardId });
+        }
     }
 }

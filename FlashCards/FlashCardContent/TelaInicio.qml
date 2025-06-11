@@ -16,6 +16,12 @@ Rectangle {
         }
     }
 
+    function jogar() {
+
+        var randomId = ponte.escolherFlashcard(ponte.selectAllFlashcards());
+        stackView.push("TelaPergunta.qml", { "flashcardId": randomId });
+    }
+
     Button {
         id: btJogar
         x: 715
@@ -27,7 +33,7 @@ Rectangle {
         font.family: "Arial"
         font.bold: true
 
-        onClicked: navigateTo("TelaJogando")  // Navega para TelaJogando.qml
+        onClicked: jogar()
     }
 
     Button {

@@ -3,6 +3,8 @@
 
 #include <QApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include "PonteBackFront.h"
 
 #include "autogen/environment.h"
 
@@ -11,7 +13,12 @@ int main(int argc, char *argv[])
     set_qt_environment();
     QApplication app(argc, argv);
 
+    PonteBackFront ponte;
+
     QQmlApplicationEngine engine;
+
+    engine.rootContext()->setContextProperty("ponte", &ponte);
+
     const QUrl url(mainQmlFile);
     QObject::connect(
                 &engine, &QQmlApplicationEngine::objectCreated, &app,
