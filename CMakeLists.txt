@@ -29,6 +29,13 @@ set(QML_FILES
     FlashCards/FlashCardContent/TelaResposta.qml
 )
 
+set(IMAGE_FILES_LIST
+    FlashCards/FlashCardContent/images/images.txt
+    FlashCards/FlashCardContent/images/edit.png
+    FlashCards/FlashCardContent/images/lixo.png
+    FlashCards/FlashCardContent/images/home2.png
+        FlashCards/FlashCardContent/images/Logo_Poliedro_Horiz_EDUCACAO.png
+)
 
 # --- Define a Aplicação Principal ---
 add_executable(FlashCardsApp
@@ -39,10 +46,13 @@ add_executable(FlashCardsApp
 )
 
 # --- Adiciona os ficheiros QML e de Imagem ao executável ---
-qt_add_resources(FlashCardsApp "qml_resources"
+qt_add_resources(
+    FlashCardsApp "qml_resources"
     PREFIX "/"
     FILES
         ${QML_FILES}
+        ${IMAGE_FILES_LIST}
+
 )
 
 # Informa a aplicação onde encontrar os seus ficheiros de cabeçalho C++

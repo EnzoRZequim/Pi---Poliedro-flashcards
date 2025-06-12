@@ -19,8 +19,8 @@ qt6_add_qml_module(FlashCardContent
         "TelaCriaEditaGeral.qml"
     RESOURCES
         "animatedsprite-loading.png"
-        "images/Logo_Poliedro_Horiz_EDUCACAO.webp"
-        "images/home 2.png"
+        "images/Logo_Poliedro_Horiz_EDUCACAO.png"
+        "images/home2.png"
 )
 
 

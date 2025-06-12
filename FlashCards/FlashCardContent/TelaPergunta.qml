@@ -99,7 +99,7 @@ Item {
         id: home2
         x: 29
         y: 43
-        source: "../images/home 2.png"
+        source: "images/home2.png"
         fillMode: Image.PreserveAspectFit
     }
 

@@ -45,7 +45,7 @@ Item {
         id: home2
         x: 37
         y: 43
-        source: "../images/home 2.png"
+        source: "images/home2.png"
         fillMode: Image.PreserveAspectFit
     }
 
@@ -126,7 +126,7 @@ Item {
                     y: -1
                     width: 76
                     height: 76
-                    source: "../images/edit.png"
+                    source: "images/edit.png"
                     fillMode: Image.PreserveAspectFit
                 }
             }
@@ -138,7 +138,7 @@ Item {
             y: 15
             width: 70
             height: 70
-            source: "../images/lixo.png"
+            source: "images/lixo.png"
             fillMode: Image.PreserveAspectFit
         }
 
@@ -172,7 +172,7 @@ Item {
                     y: -1
                     width: 76
                     height: 76
-                    source: "../images/edit.png"
+                    source: "images/edit.png"
                     fillMode: Image.PreserveAspectFit
                 }
             }
@@ -184,7 +184,7 @@ Item {
             y: 144
             width: 70
             height: 70
-            source: "../images/lixo.png"
+            source: "images/lixo.png"
             fillMode: Image.PreserveAspectFit
         }
 
@@ -218,7 +218,7 @@ Item {
                     y: -1
                     width: 76
                     height: 76
-                    source: "../images/edit.png"
+                    source: "images/edit.png"
                     fillMode: Image.PreserveAspectFit
                 }
             }
@@ -230,7 +230,7 @@ Item {
             y: 259
             width: 70
             height: 70
-            source: "../images/lixo.png"
+            source: "images/lixo.png"
             fillMode: Image.PreserveAspectFit
         }
 
@@ -264,7 +264,7 @@ Item {
                     y: -1
                     width: 76
                     height: 76
-                    source: "../images/edit.png"
+                    source: "images/edit.png"
                     fillMode: Image.PreserveAspectFit
                 }
             }
@@ -276,7 +276,7 @@ Item {
             y: 386
             width: 70
             height: 70
-            source: "../images/lixo.png"
+            source: "images/lixo.png"
             fillMode: Image.PreserveAspectFit
         }
     }
@@ -354,7 +354,7 @@ Item {
                 y: -1
                 width: 76
                 height: 76
-                source: "../images/edit.png"
+                source: "images/edit.png"
                 fillMode: Image.PreserveAspectFit
             }
         }
@@ -366,7 +366,7 @@ Item {
         y: 821
         width: 70
         height: 70
-        source: "../images/lixo.png"
+        source: "images/lixo.png"
         fillMode: Image.PreserveAspectFit
     }
 

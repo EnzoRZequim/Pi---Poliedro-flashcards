@@ -86,7 +86,7 @@ Rectangle {
         y: 0
         width: 1000
         height: 384
-        source: "images/Logo_Poliedro_Horiz_EDUCACAO.webp"
+        source: "images/Logo_Poliedro_Horiz_EDUCACAO.png"
         fillMode: Image.PreserveAspectFit
     }
 

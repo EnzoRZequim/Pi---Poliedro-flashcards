@@ -256,7 +256,7 @@ Rectangle {
         id: home2
         x: 60
         y: 36
-        source: "../images/home 2.png"
+        source: "images/home2.png"
         fillMode: Image.PreserveAspectFit
     }
     states: [
