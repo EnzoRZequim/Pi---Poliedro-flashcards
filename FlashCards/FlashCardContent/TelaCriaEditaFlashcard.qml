@@ -24,6 +24,10 @@ Rectangle {
         }
     }
 
+    function salvar(){
+        ponte.insertFlashcard(perguntaFlashCard.text,respostaFlashCard.text,1,1)
+    }
+
     Item {
         id: __materialLibrary__
     }
@@ -98,6 +102,7 @@ Rectangle {
         font.pointSize: 64
         font.family: "Arial"
         font.bold: true
+        onClicked: salvar()
     }
 
     Button {
@@ -110,6 +115,7 @@ Rectangle {
         font.pointSize: 64
         font.family: "Arial"
         font.bold: true
+        onClicked: navigateTo("TelaCriaEditaGeral")
     }
 
     Button {
@@ -127,7 +133,7 @@ Rectangle {
         id: home2
         x: 34
         y: 22
-        source: "../images/home 2.png"
+        source: "images/home2.png"
         fillMode: Image.PreserveAspectFit
     }
 

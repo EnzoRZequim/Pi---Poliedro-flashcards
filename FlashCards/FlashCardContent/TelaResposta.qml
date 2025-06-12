@@ -14,6 +14,25 @@ Item {
     width: 1920
     height: 1080
 
+    property int flashcardId: -1
+
+    property string respostaTexto: ""
+
+    property int tentativas
+
+    Component.onCompleted: {
+        if (flashcardId !== -1) {
+            respostaTexto = ponte.selectResposta(flashcardId);
+            tentativas = ponte.selectAcertos(flashcardId) + ponte.selectErros(flashcardId);
+        }
+    }
+
+    function playNextCard() {
+        var randomId = ponte.escolherFlashcard(ponte.selectAllFlashcards());
+
+        stackView.replace("TelaPergunta.qml", { "flashcardId": randomId });
+    }
+
     // Função para navegar para outra tela
     function navigateTo(page) {
         if (stackView) {  // Verifica se o StackView está disponível
@@ -73,7 +92,7 @@ Item {
             y: 59
             width: 256
             height: 80
-            text: qsTr("0 / 1")
+            text: ponte.selectAcertos(flashcardId) + qsTr("/") + tentativas
             font.pixelSize: 64
             horizontalAlignment: Text.AlignHCenter
             font.weight: Font.Bold
@@ -84,7 +103,7 @@ Item {
         id: home2
         x: 37
         y: 43
-        source: "../images/home 2.png"
+        source: "images/home2.png"
         fillMode: Image.PreserveAspectFit
     }
 
@@ -101,7 +120,7 @@ Item {
             y: 8
             width: 1462
             height: 649
-            text: qsTr("Text")
+            text: respostaTexto
             font.pixelSize: 64
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -119,6 +138,10 @@ Item {
         font.pointSize: 36
         font.family: "Arial"
         font.bold: true
+        onClicked: {
+            ponte.updateAcertos(flashcardId);
+            playNextCard();
+        }
     }
 
     Button {
@@ -131,5 +154,9 @@ Item {
         font.pointSize: 36
         font.family: "Arial"
         font.bold: true
+        onClicked: {
+            ponte.updateErros(flashcardId);
+            playNextCard();
+        }
     }
 }

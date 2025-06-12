@@ -16,6 +16,12 @@ Rectangle {
         }
     }
 
+    function jogar() {
+
+        var randomId = ponte.escolherFlashcard(ponte.selectAllFlashcards());
+        stackView.push("TelaPergunta.qml", { "flashcardId": randomId });
+    }
+
     Button {
         id: btJogar
         x: 715
@@ -27,7 +33,7 @@ Rectangle {
         font.family: "Arial"
         font.bold: true
 
-        onClicked: navigateTo("TelaJogando")  // Navega para TelaJogando.qml
+        onClicked: jogar()
     }
 
     Button {
@@ -78,7 +84,7 @@ Rectangle {
         y: 0
         width: 1000
         height: 384
-        source: "images/Logo_Poliedro_Horiz_EDUCACAO.webp"
+        source: "images/Logo_Poliedro_Horiz_EDUCACAO.png"
         fillMode: Image.PreserveAspectFit
     }
 

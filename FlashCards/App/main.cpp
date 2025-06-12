@@ -1,31 +1,34 @@
-// Copyright (C) 2024 The Qt Company Ltd.
-// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only
-
-#include <QApplication>
+#include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
-#include "autogen/environment.h"
+#include <QQmlContext>
+#include <QtPlugin> // Incluir para carregar plugins estaticamente
+#include "../Banco/PonteBackFront.h"
+#include "../Banco/ChamadaBanco.h"
+// Garante que o plugin para o formato de imagem WebP é incluído na aplicação
 
 int main(int argc, char *argv[])
 {
-    set_qt_environment();
-    QApplication app(argc, argv);
+    QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    const QUrl url(mainQmlFile);
+
+    createTables();
+
+    PonteBackFront ponte;
+    engine.rootContext()->setContextProperty("ponte", &ponte);
+
+    const QUrl url(u"qrc:/FlashCards/FlashCardContent/App.qml"_qs);
+
     QObject::connect(
-                &engine, &QQmlApplicationEngine::objectCreated, &app,
-                [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-
-    engine.addImportPath(QCoreApplication::applicationDirPath() + "/qml");
-    engine.addImportPath(":/");
+        &engine,
+        &QQmlApplicationEngine::objectCreated,
+        &app,
+        [url](QObject *obj, const QUrl &objUrl) {
+            if (!obj && url == objUrl)
+                QCoreApplication::exit(-1);
+        },
+        Qt::QueuedConnection);
     engine.load(url);
-
-    if (engine.rootObjects().isEmpty())
-        return -1;
 
     return app.exec();
 }
