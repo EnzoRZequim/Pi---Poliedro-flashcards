@@ -110,6 +110,7 @@ Item {
                 y: 8
                 width: 76
                 height: 76
+                onClicked: ponte.clearAllTables()
             }
 
             Button {

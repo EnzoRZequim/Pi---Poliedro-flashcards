@@ -18,9 +18,12 @@ Item {
 
     property string respostaTexto: ""
 
+    property int tentativas
+
     Component.onCompleted: {
         if (flashcardId !== -1) {
             respostaTexto = ponte.selectResposta(flashcardId);
+            tentativas = ponte.selectAcertos(flashcardId) + ponte.selectErros(flashcardId);
         }
     }
 
@@ -89,7 +92,7 @@ Item {
             y: 59
             width: 256
             height: 80
-            text: qsTr("0 / 1")
+            text: ponte.selectAcertos(flashcardId) + qsTr("/") + tentativas
             font.pixelSize: 64
             horizontalAlignment: Text.AlignHCenter
             font.weight: Font.Bold

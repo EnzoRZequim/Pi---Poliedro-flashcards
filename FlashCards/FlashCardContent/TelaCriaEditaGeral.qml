@@ -17,6 +17,23 @@ Rectangle {
     height: Constants.height
     color: "#ffffff"
 
+    property int maiorId
+
+    property int segMaiorId
+
+    property int terMaiorId
+
+    property int quaMaiorId
+
+    property var lista: ponte.selectAllFlashcards()
+
+    Component.onCompleted:{
+        maiorId = lista[lista.length - 1];
+        segMaiorId =lista[lista.length - 2];
+        terMaiorId = lista[lista.length - 3];
+        quaMaiorId = lista[lista.length - 4];
+    }
+
     // Função para navegar para outra tela
     function navigateTo(page) {
         if (stackView) {  // Verifica se o StackView está disponível
@@ -54,7 +71,7 @@ Rectangle {
             id: text1
             x: 84
             y: 14
-            text: qsTr("Pergunta Flash Card")
+            text: ponte.selectPergunta(maiorId)
             font.pixelSize: 64
             font.bold: true
             font.family: "Arial"
@@ -75,7 +92,7 @@ Rectangle {
             y: 16
             width: 633
             height: 69
-            text: qsTr("Pergunta Flash Card")
+            text:  ponte.selectPergunta(segMaiorId)
             font.pixelSize: 64
             font.family: "Arial"
             font.bold: true
@@ -106,7 +123,7 @@ Rectangle {
         y: 705
         width: 633
         height: 69
-        text: qsTr("Pergunta Flash Card")
+        text:  ponte.selectPergunta(terMaiorId)
         font.pixelSize: 64
         font.family: "Arial"
         font.bold: true
@@ -118,7 +135,7 @@ Rectangle {
         y: 832
         width: 633
         height: 69
-        text: qsTr("Pergunta Flash Card")
+        text: ponte.selectPergunta(quaMaiorId)
         font.pixelSize: 64
         font.family: "Arial"
         font.bold: true
@@ -182,7 +199,7 @@ Rectangle {
         y: 457
         width: 633
         height: 69
-        text: qsTr("Resposta Flash Card")
+        text:  ponte.selectResposta(maiorId)
         font.pixelSize: 64
         font.family: "Arial"
         font.bold: true
@@ -194,7 +211,7 @@ Rectangle {
         y: 581
         width: 633
         height: 69
-        text: qsTr("Resposta Flash Card")
+        text: ponte.selectResposta(segMaiorId)
         font.pixelSize: 64
         font.family: "Arial"
         font.bold: true
@@ -206,7 +223,7 @@ Rectangle {
         y: 705
         width: 633
         height: 69
-        text: qsTr("Resposta Flash Card")
+        text: ponte.selectResposta(terMaiorId)
         font.pixelSize: 64
         font.family: "Arial"
         font.bold: true
@@ -218,7 +235,7 @@ Rectangle {
         y: 832
         width: 633
         height: 69
-        text: qsTr("Resposta Flash Card")
+        text: ponte.selectResposta(quaMaiorId)
         font.pixelSize: 64
         font.family: "Arial"
         font.bold: true

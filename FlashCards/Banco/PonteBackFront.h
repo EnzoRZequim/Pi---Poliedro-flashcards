@@ -55,6 +55,7 @@ public:
     //Funções de Atualização
     Q_INVOKABLE void updateAcertos(int id_flashcard);
     Q_INVOKABLE void updateErros(int id_flashcard);
+
 };
 
 #endif

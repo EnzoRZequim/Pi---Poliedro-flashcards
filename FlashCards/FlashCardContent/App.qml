@@ -1,17 +1,16 @@
 import QtQuick
 import QtQuick.Controls
-import FlashCard
 
 Window {
-    width: Constants.width  // Certifique-se de que Constants está definido
-    height: Constants.height
+    width: 1920
+    height: 1080
     visible: true
     title: "FlashCard"
 
-    // StackView para gerenciar a navegação
+    // StackView para gerir a navegação
     StackView {
         id: stackView
         anchors.fill: parent
-        initialItem: TelaInicio {}  // Define TelaInicio como a primeira tela
+        initialItem: TelaInicio {}
     }
 }
